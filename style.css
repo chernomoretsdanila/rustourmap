@@ -368,6 +368,21 @@ body {
 .info-section.recommendations h3::before {
   content: "💡";
 }
+.info-section.additional-info {
+  background: #fff3cd;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #f39c12;
+}
+
+.info-section.additional-info h3::before {
+  content: "ℹ️";
+}
+
+.info-section.additional-info p {
+  font-size: 15px;
+  line-height: 1.9;
+}
 
 .info-section p {
   color: #555;
