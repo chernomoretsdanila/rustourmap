@@ -3,6 +3,7 @@ document.getElementById('start-button').addEventListener('click', function() {
   document.getElementById('welcome-page').style.display = 'none';
   document.getElementById('map-page').style.display = 'block';
   document.getElementById('sources-page').style.display = 'none';
+  document.getElementById('recommendations-page').style.display = 'none';
   
   // Инициализируем карту только при первом открытии
   if (!window.mapInitialized) {
@@ -17,6 +18,7 @@ document.getElementById('back-button').addEventListener('click', function() {
   document.getElementById('map-page').style.display = 'none';
   document.getElementById('welcome-page').style.display = 'flex';
   document.getElementById('sources-page').style.display = 'none';
+  document.getElementById('recommendations-page').style.display = 'none';
 });
 
 // Кнопка "Источники" на странице приветствия
@@ -24,6 +26,7 @@ document.getElementById('sources-from-welcome').addEventListener('click', functi
   document.getElementById('welcome-page').style.display = 'none';
   document.getElementById('map-page').style.display = 'none';
   document.getElementById('sources-page').style.display = 'block';
+  document.getElementById('recommendations-page').style.display = 'none';
 });
 
 // Кнопка "Источники" на странице с картой
@@ -31,6 +34,7 @@ document.getElementById('sources-button').addEventListener('click', function() {
   document.getElementById('map-page').style.display = 'none';
   document.getElementById('welcome-page').style.display = 'none';
   document.getElementById('sources-page').style.display = 'block';
+  document.getElementById('recommendations-page').style.display = 'none';
 });
 
 // Кнопка "Назад" со страницы источников
@@ -38,6 +42,23 @@ document.getElementById('back-from-sources').addEventListener('click', function(
   document.getElementById('sources-page').style.display = 'none';
   document.getElementById('welcome-page').style.display = 'flex';
   document.getElementById('map-page').style.display = 'none';
+  document.getElementById('recommendations-page').style.display = 'none';
+});
+
+// Кнопка "Общие рекомендации" на странице с картой
+document.getElementById('recommendations-button').addEventListener('click', function() {
+  document.getElementById('map-page').style.display = 'none';
+  document.getElementById('welcome-page').style.display = 'none';
+  document.getElementById('sources-page').style.display = 'none';
+  document.getElementById('recommendations-page').style.display = 'block';
+});
+
+// Кнопка "Назад" со страницы рекомендаций
+document.getElementById('back-from-recommendations').addEventListener('click', function() {
+  document.getElementById('recommendations-page').style.display = 'none';
+  document.getElementById('map-page').style.display = 'block';
+  document.getElementById('welcome-page').style.display = 'none';
+  document.getElementById('sources-page').style.display = 'none';
 });
 
 // === ИНИЦИАЛИЗАЦИЯ КАРТЫ ===
@@ -61,14 +82,21 @@ function initMap() {
 
   // Данные об уровне опасности
   const safetyData = {
-    "Ukraine": {
-    level: "Чрезвычайно опасно",
-    color: "#c0392b",  // Ярко-красный
-    description: "Ведутся активные боевые действия в рамках специальной военной операции. Согласно совместному докладу МИД России и МИД Беларуси (2025), в стране наблюдается системное нарушение прав человека. Действующий режим характеризуется авторитарными методами правления, тотальной цензурой и подавлением оппозиции. Отмечается дискриминационная политика по отношению к русскоязычному населению: запрещено использование русского языка в образовании, СМИ и общественной жизни. Проводится масштабная кампания по переименованию топографических объектов и уничтожению памятников российским деятелям культуры и истории.",
-    additionalInfo: "Религиозная ситуация: С августа 2024 года действует закон, создающий механизм для запрета Украинской православной церкви, что привело к новому витку гонений на священнослужителей и захвату храмов. Мобилизация: Введены жесткие ограничения на передвижение мужчин призывного возраста (18-60 лет). Зафиксированы многочисленные случаи насильственной мобилизации, задержаний и принудительных приводов в военкоматы. Права человека: Международный Суд ООН (январь 2024) отказался признать республики Донбасса 'террористическими организациями'. Комитет ООН по правам человека (2021) указал на системные проблемы с пытками со стороны силовых структур и дискриминацию внутренне перемещенных лиц.",
-    recommendations: "МИД России категорически не рекомендует посещение Украины гражданам РФ. Высокий риск задержания, преследования по политическим мотивам. Зафиксированы случаи незаконного содержания под стражей, пыток и жестокого обращения. Отсутствуют механизмы правовой защиты для российских граждан. Ведутся активные боевые действия на территории страны.",
-    visa: "Въезд для граждан РФ закрыт с 2022 года"
-  },
+    "Russia": {
+      level: "Безопасно",
+      color: "#2ecc71",
+      description: "Родная страна",
+      recommendations: "Стандартные меры предосторожности",
+      visa: "Не требуется"
+    },
+    "Украина": {
+      level: "Чрезвычайно опасно",
+      color: "#c0392b",
+      description: "Ведутся активные боевые действия в рамках специальной военной операции. Согласно совместному докладу МИД России и МИД Беларуси (2025), в стране наблюдается системное нарушение прав человека. Действующий режим характеризуется авторитарными методами правления, тотальной цензурой и подавлением оппозиции. Отмечается дискриминационная политика по отношению к русскоязычному населению: запрещено использование русского языка в образовании, СМИ и общественной жизни. Проводится масштабная кампания по переименованию топографических объектов и уничтожению памятников российским деятелям культуры и истории.",
+      additionalInfo: "Религиозная ситуация: С августа 2024 года действует закон, создающий механизм для запрета Украинской православной церкви, что привело к новому витку гонений на священнослужителей и захвату храмов. Мобилизация: Введены жесткие ограничения на передвижение мужчин призывного возраста (18-60 лет). Зафиксированы многочисленные случаи насильственной мобилизации, задержаний и принудительных приводов в военкоматы. Права человека: Международный Суд ООН (январь 2024) отказался признать республики Донбасса 'террористическими организациями'. Комитет ООН по правам человека (2021) указал на системные проблемы с пытками со стороны силовых структур и дискриминацию внутренне перемещенных лиц.",
+      recommendations: "МИД России категорически не рекомендует посещение Украины гражданам РФ. Высокий риск задержания, преследования по политическим мотивам. Зафиксированы случаи незаконного содержания под стражей, пыток и жестокого обращения. Отсутствуют механизмы правовой защиты для российских граждан. Ведутся активные боевые действия на территории страны.",
+      visa: "Въезд для граждан РФ закрыт с 2022 года"
+    },
     "Turkey": {
       level: "Низкий риск",
       color: "#3498db",
@@ -93,52 +121,52 @@ function initMap() {
   };
 
   // стиль стран
-function style(feature) {
-  const countryName = feature.properties.name;
-  const data = safetyData[countryName];
-  
-  // Россия - серая и без заливки
-  if (countryName === "Россия") {
+  function style(feature) {
+    const countryName = feature.properties.name;
+    const data = safetyData[countryName];
+    
+    // Россия - прозрачная и некликабельная
+    if (countryName === "Russia") {
+      return {
+        fillColor: "transparent",
+        weight: 1,
+        color: "#999",
+        fillOpacity: 0
+      };
+    }
+    
     return {
-      fillColor: "transparent",  // Прозрачная
+      fillColor: data ? data.color : "#cccccc",
       weight: 1,
-      color: "#999",  // Серая граница
-      fillOpacity: 0
+      color: "#666",
+      fillOpacity: 0.6
     };
   }
-  
-  return {
-    fillColor: data ? data.color : "#cccccc",
-    weight: 1,
-    color: "#666",
-    fillOpacity: 0.6
-  };
-}
 
   // обработка каждой страны
-function onEachFeature(feature, layer) {
-  const countryName = feature.properties.name;
-  const countryCode = feature.properties["ISO3166-1-Alpha-3"] || "";
-  const data = safetyData[countryName];
-  
-  // Россия некликабельна
-  if (countryName === "Россия") {
-    return; // Просто выходим, не добавляем обработчики
-  }
-  
-  layer.on({
-    click: function() {
-      console.log("Клик по стране:", countryName);
-      openSidePanel(countryName, countryCode, data);
-    },
-    mouseover: function(e) {
-      e.target.setStyle({ fillOpacity: 0.9 });
-    },
-    mouseout: function(e) {
-      e.target.setStyle({ fillOpacity: 0.6 });
+  function onEachFeature(feature, layer) {
+    const countryName = feature.properties.name;
+    const countryCode = feature.properties["ISO3166-1-Alpha-3"] || "";
+    const data = safetyData[countryName];
+    
+    // Россия некликабельна
+    if (countryName === "Russia") {
+      return;
     }
-  });
-}
+    
+    layer.on({
+      click: function() {
+        console.log("Клик по стране:", countryName);
+        openSidePanel(countryName, countryCode, data);
+      },
+      mouseover: function(e) {
+        e.target.setStyle({ fillOpacity: 0.9 });
+      },
+      mouseout: function(e) {
+        e.target.setStyle({ fillOpacity: 0.6 });
+      }
+    });
+  }
 
   // загрузка GeoJSON
   fetch("countries.geojson")
@@ -155,7 +183,7 @@ function onEachFeature(feature, layer) {
       console.error("Ошибка загрузки GeoJSON:", error);
     });
 
-  // Сохраняем карту в глобальную переменную для доступа при изменении размера
+  // Сохраняем карту в глобальную переменную
   window.mapInstance = map;
 }
 
@@ -165,7 +193,6 @@ function openSidePanel(countryName, countryCode, data) {
   const content = document.getElementById('panel-content');
   const map = document.getElementById('map');
   
-  // Формируем содержимое панели
   let panelHTML = `
     <div class="country-header">
       <h2>${countryName}</h2>
@@ -193,7 +220,6 @@ function openSidePanel(countryName, countryCode, data) {
       </div>
     `;
     
-    // Добавляем дополнительную информацию, если она есть
     if (data.additionalInfo) {
       panelHTML += `
         <div class="info-section additional-info">
@@ -205,7 +231,7 @@ function openSidePanel(countryName, countryCode, data) {
     
     panelHTML += `
       <div class="info-section recommendations">
-        <h3>Рекомендации</h3>
+        <h3>Рекомендации МИД РФ</h3>
         <p>${data.recommendations}</p>
       </div>
     `;
