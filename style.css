@@ -60,17 +60,6 @@ body {
   margin-bottom: 30px;
 }
 
-.project-info {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-}
-
-.project-info p {
-  color: #666;
-  margin: 5px 0;
-}
 
 /* === КНОПКИ НА СТРАНИЦЕ ПРИВЕТСТВИЯ === */
 .welcome-buttons {
