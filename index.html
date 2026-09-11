@@ -1,238 +1,278 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Безопасность туристов</title>
-
-  <link rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Атлас безопасности туристов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap&subset=cyrillic,cyrillic-ext,latin" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css?v=ui10">
 </head>
-
 <body>
 
-<!-- Страница приветствия -->
 <div id="welcome-page">
-  <div class="welcome-container">
-    <img src="tyumgu-logo.png" alt="ТюмГУ" class="university-logo">
-    <h1>Цифровые инструменты информационной безопасности туристов</h1>
-    <p class="description">
-      Интерактивная карта мира с информацией об уровне безопасности 
-      различных стран для граждан Российской Федерации.
+  <div class="welcome-bg" aria-hidden="true"></div>
+  <header class="welcome-top">
+    <img src="tyumgu-logo.png" alt="ТюмГУ" class="welcome-mark">
+    <p>Тюменский государственный университет · 43.03.02 Туризм · 2026</p>
+  </header>
+  <main class="welcome-main">
+    <p class="eyebrow">Курсовой проект</p>
+    <h1>Атлас безопасности туристских направлений</h1>
+    <p class="welcome-lead">
+      Интерактивная карта для граждан Российской Федерации: единый балл риска,
+      вклад семи факторов и официальные ориентиры перед поездкой.
     </p>
-    <div class="welcome-buttons">
-      <button id="start-button" class="start-btn">Открыть карту</button>
-      <button id="sources-from-welcome" class="sources-btn-welcome">Источники</button>
+    <div class="welcome-actions">
+      <button id="start-button" class="btn btn-primary" type="button">Открыть карту</button>
+      <button id="sources-from-welcome" class="btn btn-ghost" type="button">Источники и методика</button>
     </div>
-  </div>
+    <ul class="welcome-stats">
+      <li><strong>71</strong><span>страна в выборке</span></li>
+      <li><strong>7</strong><span>индексов в модели</span></li>
+      <li><strong>5</strong><span>уровней опасности</span></li>
+    </ul>
+  </main>
 </div>
 
-<!-- Страница с картой (изначально скрыта) -->
-<div id="map-page" style="display: none;">
-  <div class="header">
-    <h2>Цифровые инструменты информационной безопасности туристов</h2>
-    <div class="header-buttons">
-      <button id="recommendations-button" class="recommendations-btn">📋 Общие рекомендации</button>
-      <button id="sources-button" class="sources-btn">📚 Источники</button>
-      <button id="back-button" class="back-btn">← Назад</button>
+<div id="map-page" hidden>
+  <header class="app-bar">
+    <div class="app-brand">
+      <img src="tyumgu-logo.png" alt="ТюмГУ" class="app-logo">
+      <div>
+        <p class="app-kicker">Курсовой проект</p>
+        <h2>Атлас безопасности</h2>
+      </div>
     </div>
-  </div>
-  
-<div class="legend-container">
-  <div id="legend">
-    <h4>Уровень опасности:</h4>
-    <div><span style="background: #4caf50"></span> Безопасно</div>
-    <div><span style="background: #8bc34a"></span> Низкий риск</div>
-    <div><span style="background: #ffc107"></span> Средний риск</div>
-    <div><span style="background: #ff5722"></span> Высокий риск</div>
-    <div><span style="background: #b71c1c"></span> Чрезвычайно опасно</div>
-    <div><span style="background: #cccccc"></span> Нет данных</div>
-  </div>
-  
-  <div class="map-disclaimer">
-  <p><strong>⚠️ Важное примечание о границах:</strong></p>
-  <p>Границы государств на данной карте являются условными и приведены исключительно для наглядности и удобства восприятия информации о безопасности путешествий. Изображенные границы не отражают политическую позицию автора проекта и не претендуют на точное или официальное отображение международных границ, спорных территорий или линий разграничения. Для получения актуальной информации о государственных границах следует обращаться к официальным картографическим источникам.</p>
-</div>
-</div>
-  
-  <div class="map-container">
+    <nav class="app-nav">
+      <button id="recommendations-button" class="btn btn-text" type="button">Рекомендации</button>
+      <button id="sources-button" class="btn btn-text" type="button">Источники</button>
+      <button id="back-button" class="btn btn-quiet" type="button">На главную</button>
+    </nav>
+  </header>
+
+  <div class="map-stage">
+    <div id="map-loading" class="map-loading" hidden>
+      <div class="map-loading-card">Загрузка карты…</div>
+    </div>
     <div id="map"></div>
-    
-    <!-- Боковая панель -->
-    <div id="side-panel" class="side-panel">
-      <button id="close-panel" class="close-panel">×</button>
+
+    <div class="map-hud map-hud-search">
+      <label class="visually-hidden" for="country-search">Поиск страны</label>
+      <input id="country-search" type="search" list="country-list" placeholder="Найти страну" autocomplete="off">
+      <datalist id="country-list"></datalist>
+      <p id="filter-count" class="filter-count">показано 0 из 0</p>
+    </div>
+
+    <div class="map-hud map-hud-filters">
+      <p class="hud-label">Уровни на карте</p>
+      <div id="level-filters" class="level-filters" role="group" aria-label="Фильтр по уровню опасности"></div>
+      <label class="flow-toggle">
+        <input id="flow-toggle" type="checkbox">
+        <span>Показать турпоток</span>
+      </label>
+      <div id="flow-legend" class="flow-legend">
+        <p class="hud-label">Турпоездки, 2025</p>
+        <div class="flow-legend-item">
+          <span class="flow-legend-swatch" style="width: 10px; height: 10px"></span>
+          100 тыс.
+        </div>
+        <div class="flow-legend-item">
+          <span class="flow-legend-swatch" style="width: 18px; height: 18px"></span>
+          1 млн
+        </div>
+        <div class="flow-legend-item">
+          <span class="flow-legend-swatch" style="width: 36px; height: 36px"></span>
+          4 млн
+        </div>
+      </div>
+    </div>
+
+    <div id="legend" class="map-hud map-hud-legend"></div>
+
+    <aside id="side-panel" class="side-panel">
+      <div id="sheet-handle" class="sheet-handle" aria-hidden="true"></div>
+      <button id="close-panel" class="close-panel" type="button" aria-label="Закрыть панель">Закрыть</button>
       <div id="panel-content">
-        <p class="panel-placeholder">Выберите страну на карте</p>
+        <p class="panel-placeholder">Выберите страну на карте или найдите её в поиске</p>
       </div>
-    </div>
+    </aside>
   </div>
 </div>
 
-<!-- Страница с источниками (изначально скрыта) -->
-<div id="sources-page" style="display: none;">
-  <div class="header">
-    <h2>📚 Источники информации</h2>
-    <button id="back-from-sources" class="back-btn">← Назад</button>
-  </div>
-  
-  <div class="sources-container">
-    <div class="sources-content">
-      <h3>Официальные источники</h3>
-      
-      <div class="source-item">
-        <h4>1. test</h4>
-        <p>test.</p>
-        <a href="https://test.ru" target="_blank">test.ru</a>
-      </div>
-
-      <div class="source-item">
-        <h4>2. test</h4>
-        <p>test.</p>
-        <a href="https://test.ru" target="_blank">test.ru</a>
-      </div>
-
-      <div class="source-item">
-        <h4>3. test</h4>
-        <p>test.</p>
-        <a href="https://test.gov.ru" target="_blank">test.gov.ru</a>
-      </div>
-
-      <h3 style="margin-top: 40px;">Дополнительные источники</h3>
-
-      <div class="source-item">
-        <h4>4. test </h4>
-        <p>test.</p>
-        <a href="https://travel.state.gov" target="_blank">test</a>
-      </div>
-
-      <div class="source-item">
-        <h4>5. test</h4>
-        <p>Рtest.</p>
-        <a href="https://www.test.uk/foreign-travel-advice" target="_blank">test.uk</a>
-      </div>
-
-      <div class="source-item">
-        <h4>6. test</h4>
-        <p>Картографические данные (GeoJSON).</p>
-        <a href="https://www.test.com" target="_blank">test.com</a>
-      </div>
-
-      <h3 style="margin-top: 40px;">Источники данных по странам</h3>
-
-      <div class="source-item">
-        <h4>7. МИД России и МИД Беларуси</h4>
-        <p>Совместный доклад о ситуации с правами человека в отдельных странах, 2025</p>
-        <p style="margin-top: 10px; font-size: 16px; color: #666;">
-          Данные об Украине основаны на официальном докладе Министерства иностранных дел Российской Федерации и Республики Беларусь "О ситуации с правами человека в отдельных странах" (2025).
-        </p>
-        <a href="https://mid.ru" target="_blank">mid.ru</a>
-      </div>
-
-      <h3 style="margin-top: 40px;">О проекте</h3>
-      
-      <div class="source-item">
-        <p><strong>Курсовой проект</strong> по теме "Цифровые инструменты информационной безопасности туристов"</p>
-        <p>Тюменский государственный университет, 2026</p>
-        <p style="margin-top: 10px; color: #999; font-size: 14px;">
-          Данные актуальны на февраль 2026 года. Рекомендуется проверять информацию перед планированием поездки.
-        </p>
+<div id="sources-page" hidden>
+  <header class="app-bar">
+    <div class="app-brand">
+      <img src="tyumgu-logo.png" alt="ТюмГУ" class="app-logo">
+      <div>
+        <p class="app-kicker">Материалы</p>
+        <h2>Источники</h2>
       </div>
     </div>
+    <nav class="app-nav">
+      <button id="back-from-sources" class="btn btn-quiet" type="button">На главную</button>
+    </nav>
+  </header>
+  <div class="doc-wrap">
+    <article class="doc">
+      <p class="doc-lead">Индексы, из которых собирается композитный балл, и официальные ресурсы для выезжающих.</p>
+
+      <h3>Индексы методологии</h3>
+      <div class="source-grid">
+        <a class="source-card" href="https://www.visionofhumanity.org/maps/global-terrorism-index/" target="_blank" rel="noopener">
+          <h4>Global Terrorism Index 2026</h4>
+          <p>Террористическая активность. Institute for Economics and Peace.</p>
+          <span>visionofhumanity.org</span>
+        </a>
+        <a class="source-card" href="https://www.numbeo.com/crime/rankings_by_country.jsp" target="_blank" rel="noopener">
+          <h4>Numbeo Crime Index 2026</h4>
+          <p>Восприятие преступности по опросам жителей.</p>
+          <span>numbeo.com</span>
+        </a>
+        <a class="source-card" href="https://www.visionofhumanity.org/maps/" target="_blank" rel="noopener">
+          <h4>Global Peace Index 2026</h4>
+          <p>Индекс миролюбия. Institute for Economics and Peace.</p>
+          <span>visionofhumanity.org</span>
+        </a>
+        <a class="source-card" href="https://www.transparency.org/en/cpi/" target="_blank" rel="noopener">
+          <h4>Corruption Perceptions Index 2025</h4>
+          <p>Восприятие коррупции. Transparency International.</p>
+          <span>transparency.org</span>
+        </a>
+        <a class="source-card" href="https://fragilestatesindex.org" target="_blank" rel="noopener">
+          <h4>Fragile States Index 2024</h4>
+          <p>Хрупкость государственных институтов. Fund for Peace.</p>
+          <span>fragilestatesindex.org</span>
+        </a>
+        <a class="source-card" href="https://www.numbeo.com/health-care/rankings_by_country.jsp" target="_blank" rel="noopener">
+          <h4>Numbeo Health Care Index 2026</h4>
+          <p>Доступность медицинской помощи для туриста.</p>
+          <span>numbeo.com</span>
+        </a>
+        <a class="source-card" href="https://epi.yale.edu" target="_blank" rel="noopener">
+          <h4>Environmental Performance Index 2024</h4>
+          <p>Экологические условия. Yale Center for Environmental Law and Policy.</p>
+          <span>epi.yale.edu</span>
+        </a>
+      </div>
+
+      <h3>Официальные ресурсы</h3>
+      <div class="source-grid">
+        <a class="source-card" href="https://mid.ru" target="_blank" rel="noopener">
+          <h4>МИД России</h4>
+          <p>Предупреждения и рекомендации для выезжающих.</p>
+          <span>mid.ru</span>
+        </a>
+        <a class="source-card" href="https://kdmid.ru" target="_blank" rel="noopener">
+          <h4>Консульский департамент</h4>
+          <p>Визы, учёт и экстренная связь.</p>
+          <span>kdmid.ru</span>
+        </a>
+        <a class="source-card" href="https://travel.state.gov" target="_blank" rel="noopener">
+          <h4>Travel Advisories</h4>
+          <p>Внешний референс Госдепартамента США.</p>
+          <span>travel.state.gov</span>
+        </a>
+      </div>
+
+      <h3>Карта</h3>
+      <div class="source-grid">
+        <a class="source-card" href="https://www.naturalearthdata.com" target="_blank" rel="noopener">
+          <h4>Natural Earth</h4>
+          <p>Геометрии государств для обзорной карты.</p>
+          <span>naturalearthdata.com</span>
+        </a>
+        <a class="source-card" href="https://leafletjs.com" target="_blank" rel="noopener">
+          <h4>Leaflet</h4>
+          <p>Открытая библиотека интерактивных карт.</p>
+          <span>leafletjs.com</span>
+        </a>
+      </div>
+
+      <div class="doc-note">
+        <p>Курсовой проект «Цифровые инструменты информационной безопасности туристов». Тюменский государственный университет, 2026. Данные на 9 сентября 2026 года. Перед поездкой сверяйтесь с МИД России.</p>
+      </div>
+    </article>
   </div>
 </div>
 
-<!-- Страница с общими рекомендациями (изначально скрыта) -->
-<div id="recommendations-page" style="display: none;">
-  <div class="header">
-    <h2>📋 Общие рекомендации для выезжающих за рубеж</h2>
-    <button id="back-from-recommendations" class="back-btn">← Назад</button>
-  </div>
-  
-  <div class="sources-container">
-    <div class="sources-content">
-      <p style="color: #666; margin-bottom: 30px; font-style: italic;">
-        Официальные рекомендации Министерства иностранных дел Российской Федерации для граждан, выезжающих за пределы страны
-      </p>
+<div id="recommendations-page" hidden>
+  <header class="app-bar">
+    <div class="app-brand">
+      <img src="tyumgu-logo.png" alt="ТюмГУ" class="app-logo">
+      <div>
+        <p class="app-kicker">Памятка</p>
+        <h2>Рекомендации МИД</h2>
+      </div>
+    </div>
+    <nav class="app-nav">
+      <button id="back-from-recommendations" class="btn btn-quiet" type="button">К карте</button>
+    </nav>
+  </header>
+  <div class="doc-wrap">
+    <article class="doc">
+      <p class="doc-lead">Официальные рекомендации Министерства иностранных дел Российской Федерации для граждан, выезжающих за рубеж.</p>
 
-      <h3>Оформление документов</h3>
-      
-      <div class="source-item">
+      <h3>Документы</h3>
+      <div class="memo">
         <h4>Заграничный паспорт</h4>
-        <p>Тщательно проверьте правильность всех внесенных в паспорт сведений (фамилия, имя, отчество, дата рождения, пол, дата выдачи и срок действия паспорта). Срок действия паспорта должен заканчиваться не ранее, чем через шесть месяцев после въезда в страну.</p>
-        <p><strong>Важно:</strong> Храните паспорт в надежном месте (например, в сейфе гостиницы), не отдавайте его никому в качестве залога.</p>
+        <p>Проверьте фамилию, имя, отчество, дату рождения, пол, дату выдачи и срок действия. Паспорт должен действовать ещё не менее шести месяцев после въезда.</p>
+        <p>Храните паспорт в надёжном месте, не оставляйте его в залог.</p>
       </div>
-
-      <div class="source-item">
-        <h4>Копии документов</h4>
-        <p>Рекомендуется сделать несколько копий билетов, страниц паспорта с личными данными, водительского удостоверения, кредитных карт, турпутевки, страхового полиса. Возьмите с собой фотографии. Хранить копии документов следует отдельно от их оригиналов.</p>
+      <div class="memo">
+        <h4>Копии</h4>
+        <p>Сделайте копии билетов, страниц паспорта, прав, карт, путёвки и страховки. Храните их отдельно от оригиналов. Возьмите фотографии.</p>
       </div>
-
-      <div class="source-item">
+      <div class="memo">
         <h4>Медицинская страховка</h4>
-        <p>Наличие полиса медицинского страхования является обязательным условием для получения виз во многие страны. Отсутствие страховки может обернуться крупными расходами при наступлении страхового случая.</p>
-        <p><strong>Обратите внимание:</strong> Страховые компании не признают страховым случаем получение травм в состоянии алкогольного опьянения или при занятиях экстремальными видами спорта.</p>
+        <p>Полис нужен для виз во многие страны и закрывает крупные расходы при страховом случае. Травмы в состоянии опьянения и экстремальный спорт часто не покрываются.</p>
       </div>
 
-      <h3 style="margin-top: 40px;">Безопасность во время путешествия</h3>
-
-      <div class="source-item">
-        <h4>В гостинице</h4>
-        <p>Изучите расположение входов-выходов, лифтов, лестниц и правила пожарной безопасности. Документы, деньги и ценные вещи храните в сейфе. Всегда имейте при себе визитную карточку гостиницы.</p>
+      <h3>Во время поездки</h3>
+      <div class="memo">
+        <h4>Гостиница</h4>
+        <p>Запомните выходы, лифты и правила пожарной безопасности. Ценности — в сейфе. Держите при себе карточку отеля.</p>
+      </div>
+      <div class="memo">
+        <h4>Общественные места</h4>
+        <p>Следите за вещами в толпе. Деньги лучше разложить по разным карманам.</p>
+      </div>
+      <div class="memo">
+        <h4>Автомобиль</h4>
+        <p>Проверьте документы и страховку. Двери блокируйте, не подвозите незнакомых, особенно у границы.</p>
       </div>
 
-      <div class="source-item">
-        <h4>В общественных местах</h4>
-        <p>Посещая торговые центры или места массового скопления людей, принимайте меры предосторожности и следите за сохранностью личных вещей и документов. Денежные средства разложите по разным карманам.</p>
+      <h3>Консульский учёт</h3>
+      <div class="memo">
+        <p>Перед выездом встаньте на учёт в дипломатическом представительстве. При чрезвычайной ситуации сведения о месте пребывания могут оказаться решающими.</p>
       </div>
 
-      <div class="source-item">
-        <h4>При использовании автомобиля</h4>
-        <p>Тщательно проверьте наличие и правильность оформления всех документов, особенно страховки. Двери блокируйте, окна открывайте лишь частично. Не подвозите незнакомых людей, особенно вблизи границы.</p>
+      <h3>Если что-то случилось</h3>
+      <div class="memo">
+        <h4>Утрата паспорта</h4>
+        <p>Сразу обратитесь в российское консульство за свидетельством на возвращение в РФ.</p>
+      </div>
+      <div class="memo">
+        <h4>ДТП, нападение, кража</h4>
+        <p>Сообщите в полицию и составьте протокол со списком пропавшего и примерной стоимостью.</p>
+      </div>
+      <div class="memo">
+        <h4>Задержание</h4>
+        <p>Не сопротивляйтесь. Не подписывайте документы на иностранном языке без переводчика или адвоката. Требуйте связь с российским консульством.</p>
       </div>
 
-      <h3 style="margin-top: 40px;">Постановка на учет в консульском учреждении</h3>
-
-      <div class="source-item">
-        <p>Рекомендуем гражданам, планирующим выезд за пределы РФ, встать на учет в дипломатическом представительстве или консульском учреждении. В случае возникновения чрезвычайной ситуации сведения о месте пребывания могут иметь решающее значение.</p>
+      <div class="contacts">
+        <p><strong>МИД России</strong> <a href="https://mid.ru" target="_blank" rel="noopener">mid.ru</a></p>
+        <p><strong>Консульский департамент</strong> <a href="https://kdmid.ru" target="_blank" rel="noopener">kdmid.ru</a></p>
+        <p><strong>Экстренная связь МИД</strong> +7 (495) 587-88-88</p>
       </div>
-
-      <h3 style="margin-top: 40px;">Действия в чрезвычайных ситуациях</h3>
-
-      <div class="source-item">
-        <h4>При утрате паспорта</h4>
-        <p>Незамедлительно обратитесь в российское дипломатическое представительство или консульское учреждение для получения свидетельства на въезд (возвращение) в РФ.</p>
-      </div>
-
-      <div class="source-item">
-        <h4>При ДТП, нападении или краже</h4>
-        <p>Сообщите о случившемся в правоохранительные органы. Необходимо составить протокол с указанием списка пропавших вещей и их примерной стоимости.</p>
-      </div>
-
-      <div class="source-item">
-        <h4>При задержании или аресте</h4>
-        <p>Не оказывайте сопротивления. Не подписывайте протоколы и документы на иностранном языке без переводчика или адвоката. Требуйте связаться с российским консульством.</p>
-      </div>
-
-      <h3 style="margin-top: 40px;">Важные контакты</h3>
-
-      <div class="source-item">
-        <p><strong>МИД России:</strong> <a href="https://mid.ru" target="_blank">mid.ru</a></p>
-        <p><strong>Консульский департамент:</strong> <a href="https://kdmid.ru" target="_blank">kdmid.ru</a></p>
-        <p><strong>Телефон экстренной связи МИД:</strong> +7 (495) 587-88-88</p>
-      </div>
-
-      <div class="source-item" style="background: #fff3cd; border-left-color: #f39c12;">
-        <p style="margin: 0; font-weight: 600;">
-          ⚠️ Помните: соблюдение этих рекомендаций поможет избежать многих проблем во время путешествия за границу.
-        </p>
-      </div>
-    </div>
+    </article>
   </div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="script.js"></script>
-
+<script src="script.js?v=ui10"></script>
 </body>
 </html>
