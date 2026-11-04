@@ -439,7 +439,8 @@ function buildFlowLayer() {
     if (!bounds || !bounds.isValid()) return;
     const name = getDisplayName(iso, data.name_en || data.name_ru);
     const levelName = ((getLevelMeta(data.level) || {}).name) || data.level_name || '';
-    const marker = L.circleMarker(bounds.getCenter(), {
+    const labelPoint = getLabelPoint(countryLayer.feature);
+    const marker = L.circleMarker(labelPoint ? labelPoint.latlng : bounds.getCenter(), {
       pane: 'flowPane',
       radius: flowRadius(data.ru_trips_2025),
       color: '#ffffff',
@@ -610,6 +611,110 @@ function addOfficialRfTerritories() {
     .catch(() => {});
 }
 
+function ringArea(ring) {
+  let sum = 0;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i, i += 1) {
+    sum += (ring[j][0] + ring[i][0]) * (ring[j][1] - ring[i][1]);
+  }
+  return Math.abs(sum / 2);
+}
+
+function ringCentroid(ring) {
+  let a = 0;
+  let cx = 0;
+  let cy = 0;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i, i += 1) {
+    const f = ring[j][0] * ring[i][1] - ring[i][0] * ring[j][1];
+    a += f;
+    cx += (ring[j][0] + ring[i][0]) * f;
+    cy += (ring[j][1] + ring[i][1]) * f;
+  }
+  if (a === 0) return ring[0];
+  return [cx / (3 * a), cy / (3 * a)];
+}
+
+// Подпись ставится в центр самого крупного полигона страны:
+// центр общего охвата у США или Франции попал бы в чужую страну.
+function getMainPolygon(feature) {
+  const geometry = feature.geometry;
+  if (!geometry) return null;
+  const polygons = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates;
+  let best = null;
+  let bestArea = 0;
+  polygons.forEach((polygon) => {
+    const area = ringArea(polygon[0]);
+    if (area > bestArea) {
+      bestArea = area;
+      best = polygon[0];
+    }
+  });
+  return best ? { ring: best, area: bestArea } : null;
+}
+
+function getLabelPoint(feature) {
+  const main = getMainPolygon(feature);
+  if (!main) return null;
+  const [lng, lat] = ringCentroid(main.ring);
+  const lngs = main.ring.map((p) => p[0]);
+  const lats = main.ring.map((p) => p[1]);
+  return {
+    latlng: L.latLng(lat, lng),
+    bounds: L.latLngBounds([Math.min(...lats), Math.min(...lngs)], [Math.max(...lats), Math.max(...lngs)]),
+    area: main.area
+  };
+}
+
+function buildLabels(geojson) {
+  if (!state.map.getPane('labelsPane')) {
+    state.map.createPane('labelsPane');
+    const pane = state.map.getPane('labelsPane');
+    pane.style.zIndex = 420;
+    pane.style.pointerEvents = 'none';
+  }
+  state.labels = [];
+  geojson.features.forEach((feature) => {
+    const point = getLabelPoint(feature);
+    if (!point) return;
+    const name = getDisplayName(getFeatureIso(feature), getFeatureName(feature));
+    const marker = L.marker(point.latlng, {
+      pane: 'labelsPane',
+      interactive: false,
+      keyboard: false,
+      icon: L.divIcon({
+        className: 'country-label',
+        html: `<span>${escapeHtml(name)}</span>`,
+        iconSize: null
+      })
+    });
+    state.labels.push({ marker, name, bounds: point.bounds, area: point.area });
+  });
+  state.labels.sort((a, b) => b.area - a.area);
+  state.map.on('zoomend', updateLabels);
+  updateLabels();
+}
+
+// Подпись показывается, только если влезает в контур страны
+// и не налезает на уже поставленные подписи крупных стран.
+function updateLabels() {
+  if (!state.labels) return;
+  const placed = [];
+  state.labels.forEach((label) => {
+    const nw = state.map.latLngToLayerPoint(label.bounds.getNorthWest());
+    const se = state.map.latLngToLayerPoint(label.bounds.getSouthEast());
+    const width = label.name.length * 6.5;
+    const center = state.map.latLngToLayerPoint(label.marker.getLatLng());
+    const box = L.bounds([center.x - width / 2, center.y - 8], [center.x + width / 2, center.y + 8]);
+    const fits = se.x - nw.x >= width * 0.9 && se.y - nw.y >= 14;
+    const free = fits && !placed.some((other) => other.intersects(box));
+    if (free) {
+      placed.push(box);
+      if (!state.map.hasLayer(label.marker)) label.marker.addTo(state.map);
+    } else if (state.map.hasLayer(label.marker)) {
+      state.map.removeLayer(label.marker);
+    }
+  });
+}
+
 function renderCountries(geojson) {
   state.layersByIso = {};
   state.layersByName = {};
@@ -625,6 +730,7 @@ function renderCountries(geojson) {
   buildFlowLayer();
   applyFilters();
   addOfficialRfTerritories();
+  buildLabels(geojson);
 }
 
 async function initMap() {
@@ -639,14 +745,6 @@ async function initMap() {
   }).setView([20, 0], 2);
 
   L.control.zoom({ position: 'bottomright' }).addTo(state.map);
-
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png', {
-    attribution: '',
-    noWrap: true,
-    minZoom: 2,
-    maxZoom: 5,
-    opacity: 0.85
-  }).addTo(state.map);
 
   window.setTimeout(refreshMapSize, 100);
 

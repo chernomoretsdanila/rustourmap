@@ -275,6 +275,22 @@ a {
   width: auto;
 }
 
+.country-label {
+  background: none;
+  border: 0;
+}
+
+.country-label span {
+  display: block;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink-soft);
+  text-shadow: 0 0 3px #fffdf8, 0 0 3px #fffdf8, 0 0 2px #fffdf8;
+}
+
 .map-hud {
   position: absolute;
   z-index: 500;
