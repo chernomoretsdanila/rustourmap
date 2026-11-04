@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Атлас безопасности туристов</title>
+  <title>Атлас безопасности туристских направлений</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap&subset=cyrillic,cyrillic-ext,latin" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-  <link rel="stylesheet" href="style.css?v=ui11">
+  <link rel="stylesheet" href="style.css?v=ui12">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
     <p>Тюменский государственный университет · 43.03.02 Туризм · 2026</p>
   </header>
   <main class="welcome-main">
-    <p class="eyebrow">Курсовой проект</p>
+    <p class="eyebrow">Проектная работа</p>
     <h1>Атлас безопасности туристских направлений</h1>
     <p class="welcome-lead">
       Интерактивная карта для граждан Российской Федерации: единый балл риска,
@@ -42,7 +42,7 @@
     <div class="app-brand">
       <img src="tyumgu-logo.png" alt="ТюмГУ" class="app-logo">
       <div>
-        <p class="app-kicker">Курсовой проект</p>
+        <p class="app-kicker">Проектная работа</p>
         <h2>Атлас безопасности</h2>
       </div>
     </div>
@@ -80,11 +80,11 @@
           100 тыс.
         </div>
         <div class="flow-legend-item">
-          <span class="flow-legend-swatch" style="width: 18px; height: 18px"></span>
+          <span class="flow-legend-swatch" style="width: 32px; height: 32px"></span>
           1 млн
         </div>
         <div class="flow-legend-item">
-          <span class="flow-legend-swatch" style="width: 36px; height: 36px"></span>
+          <span class="flow-legend-swatch" style="width: 63px; height: 63px"></span>
           4 млн
         </div>
       </div>
@@ -108,7 +108,7 @@
       <img src="tyumgu-logo.png" alt="ТюмГУ" class="app-logo">
       <div>
         <p class="app-kicker">Материалы</p>
-        <h2>Источники</h2>
+        <h2>Источники и методика</h2>
       </div>
     </div>
     <nav class="app-nav">
@@ -118,6 +118,16 @@
   <div class="doc-wrap">
     <article class="doc">
       <p class="doc-lead">Индексы, из которых собирается композитный балл, и официальные ресурсы для выезжающих.</p>
+
+      <h3>Методика расчёта</h3>
+      <div class="doc-note">
+        <p>1. Значения семи индексов приводятся к шкале 0–100 минимакс-нормализацией по фактическому размаху выборки из 71 страны. Для индексов риска (GTI, Crime, GPI, FSI) используется обратное преобразование: 100 — лучшее значение в выборке, 0 — худшее.</p>
+        <p>2. Балл S — взвешенная сумма нормализованных значений. Веса получены методом анализа иерархий (CR = 0,046): терроризм 39%, преступность 20%, социально-политическая обстановка 20%, коррупция 9%, хрупкость государства 6%, здравоохранение 3%, экология 3%.</p>
+        <p>3. Уровни опасности определены методом естественных границ Дженкса: свыше 79,99 — безопасно; 69,06–79,99 — низкий риск; 50,25–69,05 — умеренный; 26,07–50,24 — высокий; до 26,06 включительно — критическая опасность. Границы совпадают с баллами стран, замыкающих классы (Болгария, Киргизия, Египет, Колумбия), поэтому уровни этих стран чувствительны к небольшим изменениям данных.</p>
+        <p>4. Стоп-критерий: если нормализованное значение GTI или GPI ниже 20, стране присваивается пятый уровень независимо от балла.</p>
+        <p>5. Пропуски восстановлены: Health Care Index Афганистана — средним по выборке, EPI Сирии — медианой по странам Ближнего Востока в выборке. В карточке страны они отмечены.</p>
+        <p>Расчёт воспроизводится скриптом <a href="https://github.com/chernomoretsdanila/rustourmap/blob/main/tools/calc.py" target="_blank" rel="noopener">tools/calc.py</a>, исходные значения — в файле <a href="data/raw_values.csv" target="_blank" rel="noopener">data/raw_values.csv</a>.</p>
+      </div>
 
       <h3>Индексы методологии</h3>
       <div class="source-grid">
@@ -192,7 +202,7 @@
       </div>
 
       <div class="doc-note">
-        <p>Курсовой проект «Цифровые инструменты информационной безопасности туристов». Тюменский государственный университет, 2026. Данные на 9 сентября 2026 года. Перед поездкой сверяйтесь с МИД России.</p>
+        <p>Проектная работа «Цифровые инструменты информационной безопасности туристов». Тюменский государственный университет, 2026. Данные на 11 сентября 2026 года. Перед поездкой сверяйтесь с МИД России.</p>
       </div>
     </article>
   </div>
@@ -273,6 +283,6 @@
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="script.js?v=ui11"></script>
+<script src="script.js?v=ui12"></script>
 </body>
 </html>

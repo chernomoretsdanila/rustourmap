@@ -20,7 +20,7 @@ const NO_DATA_COLOR = '#cccccc';
 const RUSSIA_NAMES = new Set(['Russia', 'Россия']);
 
 const FLOW_K = 34 / Math.sqrt(4610000);
-const FLOW_MIN_RADIUS = 4;
+const FLOW_MIN_RADIUS = 2;
 
 const state = {
   map: null,
@@ -266,7 +266,9 @@ function renderCountryPanel(iso, data) {
   const levelName = (level && level.name) || data.level_name;
   const levelColor = getLevelColor(data.level);
   const title = getDisplayName(iso, data.name_en || data.name_ru);
-  const stopRule = data.stop_rule_applied
+  const breaks = (state.safety.meta && state.safety.meta.jenks_breaks) || [];
+  const raisedByStopRule = data.stop_rule_applied && breaks.length > 0 && Number(data.score) > breaks[0];
+  const stopRule = raisedByStopRule
     ? `<div class="stop-rule-warning">Уровень повышен до критического по стоп-критерию: нормализованное значение GTI или GPI ниже 20</div>`
     : '';
 
