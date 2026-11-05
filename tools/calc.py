@@ -166,6 +166,35 @@ def export_csv(data):
             wr.writerow([iso, c['name_ru']] + [str(c['raw'][f]).replace('.', ',') for f in fields]
                         + [', '.join(c.get('imputed') or [])])
     print('записан', out)
+    src = ROOT / 'data' / 'sources.csv'
+    with open(src, 'w', encoding='utf-8-sig', newline='') as fh:
+        wr = csv.writer(fh, delimiter=';')
+        wr.writerow(['поле', 'индекс и издание', 'организация', 'URL', 'дата обращения'])
+        for row in SOURCES:
+            wr.writerow(row)
+    print('записан', src)
+
+
+SOURCES = [
+    ['GTI', 'Global Terrorism Index 2026', 'Institute for Economics and Peace',
+     'https://www.visionofhumanity.org/maps/global-terrorism-index/', '11.09.2026'],
+    ['Crime', 'Numbeo Crime Index by Country 2026', 'Numbeo',
+     'https://www.numbeo.com/crime/rankings_by_country.jsp', '11.09.2026'],
+    ['GPI', 'Global Peace Index 2026', 'Institute for Economics and Peace',
+     'https://www.visionofhumanity.org/maps/', '11.09.2026'],
+    ['CPI', 'Corruption Perceptions Index 2025', 'Transparency International',
+     'https://www.transparency.org/en/cpi/', '11.09.2026'],
+    ['FSI', 'Fragile States Index 2024', 'Fund for Peace', 'https://fragilestatesindex.org', '11.09.2026'],
+    ['HCI', 'Numbeo Health Care Index by Country 2026', 'Numbeo',
+     'https://www.numbeo.com/health-care/rankings_by_country.jsp', '11.09.2026'],
+    ['EPI', 'Environmental Performance Index 2024', 'Yale Center for Environmental Law and Policy',
+     'https://epi.yale.edu', '11.09.2026'],
+    ['us_advisory', 'Travel Advisories', 'U.S. Department of State', 'https://travel.state.gov', '11.09.2026'],
+    ['ru_trips_2025', 'Выездной туризм граждан РФ за 2025 г. (данные Погранслужбы ФСБ России)',
+     'Российский союз туриндустрии',
+     'https://rst.ru/novosti/novosti-turizm/eksperty-rst-ocenili-statistiku-vyezdnogo-turizma-za-2025-god.html',
+     '04.11.2026'],
+]
 
 
 if __name__ == '__main__':

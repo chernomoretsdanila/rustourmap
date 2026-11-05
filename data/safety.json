@@ -480,7 +480,7 @@
     "EPI": 1.62
    },
    "imputed": [],
-   "us_advisory": 2,
+   "us_advisory": 3,
    "ru_trips_2025": 1722600,
    "description": "",
    "recommendations": "",
@@ -1082,7 +1082,7 @@
     "EPI": 0.0
    },
    "imputed": [],
-   "us_advisory": 2,
+   "us_advisory": 1,
    "ru_trips_2025": 281240,
    "description": "",
    "recommendations": "",
@@ -1942,7 +1942,7 @@
     "EPI": 1.36
    },
    "imputed": [],
-   "us_advisory": 2,
+   "us_advisory": 3,
    "ru_trips_2025": null,
    "description": "",
    "recommendations": "",
@@ -2458,7 +2458,7 @@
     "EPI": 1.27
    },
    "imputed": [],
-   "us_advisory": 2,
+   "us_advisory": 1,
    "ru_trips_2025": 885760,
    "description": "",
    "recommendations": "",
@@ -2587,7 +2587,7 @@
     "EPI": 1.72
    },
    "imputed": [],
-   "us_advisory": 4,
+   "us_advisory": 3,
    "ru_trips_2025": 7100,
    "description": "",
    "recommendations": "",
