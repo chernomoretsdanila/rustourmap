@@ -169,11 +169,22 @@ def export_csv(data):
     src = ROOT / 'data' / 'sources.csv'
     with open(src, 'w', encoding='utf-8-sig', newline='') as fh:
         wr = csv.writer(fh, delimiter=';')
-        wr.writerow(['поле', 'индекс и издание', 'организация', 'URL', 'дата обращения'])
+        wr.writerow(['поле', 'индекс и издание', 'организация', 'URL', 'дата обращения', 'архивная копия страницы (Wayback Machine)'])
         for row in SOURCES:
-            wr.writerow(row)
+            wr.writerow(row + [ARCHIVE.get(row[0], '')])
     print('записан', src)
 
+
+# ближайшие к 11.09.2026 снимки страниц (часть страниц строит таблицы скриптами, и снимок может их не содержать)
+ARCHIVE = {'GTI': 'https://web.archive.org/web/20260909213410/https://www.visionofhumanity.org/maps/global-terrorism-index/',
+           'Crime': 'https://web.archive.org/web/20260911110823/https://www.numbeo.com/crime/rankings_by_country.jsp',
+           'GPI': 'https://web.archive.org/web/20260909194940/https://www.visionofhumanity.org/maps/',
+           'CPI': 'https://web.archive.org/web/20260906222935/https://www.transparency.org/en/cpi/2025',
+           'FSI': 'https://web.archive.org/web/20260811023650/https://fragilestatesindex.org/global-data/',
+           'HCI': 'https://web.archive.org/web/20260810222903/https://www.numbeo.com/health-care/rankings_by_country.jsp',
+           'EPI': 'https://web.archive.org/web/20260820140053/https://epi.yale.edu/measure/2024/epi',
+           'us_advisory': 'https://web.archive.org/web/20260714103216/https://travel.state.gov/en/international-travel/travel-advisories.html',
+           'ru_trips_2025': ''}
 
 SOURCES = [
     ['GTI', 'Global Terrorism Index 2026', 'Institute for Economics and Peace',
