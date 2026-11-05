@@ -161,10 +161,10 @@ def export_csv(data):
     out = ROOT / 'data' / 'raw_values.csv'
     with open(out, 'w', encoding='utf-8-sig', newline='') as fh:
         wr = csv.writer(fh, delimiter=';')
-        wr.writerow(['iso', 'страна'] + [f'{f} ({m["sources"][f]})' for f in fields] + ['восстановлено'])
+        wr.writerow(['iso', 'страна'] + [f'{f} ({m["sources"][f]})' for f in fields] + ['восстановлено', 'со страницы страны (нет в рейтинге)'])
         for iso, c in sorted(data['countries'].items(), key=lambda x: x[1]['name_ru']):
             wr.writerow([iso, c['name_ru']] + [str(c['raw'][f]).replace('.', ',') for f in fields]
-                        + [', '.join(c.get('imputed') or [])])
+                        + [', '.join(c.get('imputed') or []), ', '.join(c.get('low_sample') or [])])
     print('записан', out)
     src = ROOT / 'data' / 'sources.csv'
     with open(src, 'w', encoding='utf-8-sig', newline='') as fh:
@@ -183,20 +183,20 @@ ARCHIVE = {'GTI': 'https://web.archive.org/web/20260909213410/https://www.vision
            'FSI': 'https://web.archive.org/web/20260811023650/https://fragilestatesindex.org/global-data/',
            'HCI': 'https://web.archive.org/web/20260810222903/https://www.numbeo.com/health-care/rankings_by_country.jsp',
            'EPI': 'https://web.archive.org/web/20260820140053/https://epi.yale.edu/measure/2024/epi',
-           'us_advisory': 'https://web.archive.org/web/20260714103216/https://travel.state.gov/en/international-travel/travel-advisories.html',
+           'us_advisory': 'нет: с 15.07.2026 travel.state.gov отвечает архиву ошибкой 403, а на страницах стран уровень подгружается скриптом; уровни сверены по API https://cadataapi.state.gov/api/TravelAdvisories',
            'ru_trips_2025': ''}
 
 SOURCES = [
     ['GTI', 'Global Terrorism Index 2026', 'Institute for Economics and Peace',
      'https://www.visionofhumanity.org/maps/global-terrorism-index/', '11.09.2026'],
-    ['Crime', 'Numbeo Crime Index by Country 2026', 'Numbeo',
+    ['Crime', 'Numbeo Crime Index by Country 2026 Mid-Year', 'Numbeo',
      'https://www.numbeo.com/crime/rankings_by_country.jsp', '11.09.2026'],
     ['GPI', 'Global Peace Index 2026', 'Institute for Economics and Peace',
      'https://www.visionofhumanity.org/maps/', '11.09.2026'],
     ['CPI', 'Corruption Perceptions Index 2025', 'Transparency International',
      'https://www.transparency.org/en/cpi/', '11.09.2026'],
     ['FSI', 'Fragile States Index 2024', 'Fund for Peace', 'https://fragilestatesindex.org', '11.09.2026'],
-    ['HCI', 'Numbeo Health Care Index by Country 2026', 'Numbeo',
+    ['HCI', 'Numbeo Health Care Index by Country 2026 Mid-Year (Куба, Киргизия, Мьянма, Танзания - со страниц стран, в рейтинг не вошли)', 'Numbeo',
      'https://www.numbeo.com/health-care/rankings_by_country.jsp', '11.09.2026'],
     ['EPI', 'Environmental Performance Index 2024', 'Yale Center for Environmental Law and Policy',
      'https://epi.yale.edu', '11.09.2026'],

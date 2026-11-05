@@ -91,11 +91,11 @@
   "flow_source": "Погранслужба ФСБ России, турпоездки граждан РФ за 2025 г. (топ-30 стран)",
   "sources": {
    "GTI": "Global Terrorism Index 2026",
-   "Crime": "Numbeo Crime Index 2026",
+   "Crime": "Numbeo Crime Index 2026 Mid-Year",
    "GPI": "Global Peace Index 2026",
    "CPI": "Corruption Perceptions Index 2025",
    "FSI": "Fragile States Index 2024",
-   "HCI": "Numbeo Health Care Index 2026",
+   "HCI": "Numbeo Health Care Index 2026 Mid-Year",
    "EPI": "Environmental Performance Index 2024"
   }
  },
@@ -1302,7 +1302,10 @@
    "description": "",
    "recommendations": "",
    "visa": "",
-   "updated": "2026-09-11"
+   "updated": "2026-09-11",
+   "low_sample": [
+    "HCI"
+   ]
   },
   "MYS": {
    "name_ru": "Малайзия",
@@ -1603,7 +1606,10 @@
    "description": "",
    "recommendations": "",
    "visa": "",
-   "updated": "2026-09-11"
+   "updated": "2026-09-11",
+   "low_sample": [
+    "HCI"
+   ]
   },
   "NPL": {
    "name_ru": "Непал",
@@ -2119,7 +2125,10 @@
    "description": "",
    "recommendations": "",
    "visa": "",
-   "updated": "2026-09-11"
+   "updated": "2026-09-11",
+   "low_sample": [
+    "HCI"
+   ]
   },
   "FRA": {
    "name_ru": "Франция",
@@ -2979,7 +2988,10 @@
    "description": "",
    "recommendations": "",
    "visa": "",
-   "updated": "2026-09-11"
+   "updated": "2026-09-11",
+   "low_sample": [
+    "HCI"
+   ]
   },
   "PAK": {
    "name_ru": "Пакистан",

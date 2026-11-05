@@ -229,13 +229,16 @@ function renderEmptyPanel(name, iso) {
 function renderFactorBars(data) {
   const weights = state.safety.meta.weights;
   const imputed = new Set(data.imputed || []);
+  const lowSample = new Set(data.low_sample || []);
   return FACTOR_ORDER.map((key) => {
     const normalized = Number(data.normalized[key] || 0);
     const weightPct = Number(weights[key] || 0) * 100;
     const contribution = Number(data.contribution[key] || 0);
     const imputedMark = imputed.has(key)
       ? `<span class="imputed-flag" title="Значение восстановлено импутацией, потому что исходный индекс для этой страны отсутствовал в источнике">данные восстановлены</span>`
-      : '';
+      : lowSample.has(key)
+        ? `<span class="imputed-flag" title="Страны нет в рейтинге Numbeo из-за малого числа ответов, значение взято со страницы страны на сайте Numbeo">мало ответов</span>`
+        : '';
     return `
       <div class="factor-row">
         <div class="factor-head">
