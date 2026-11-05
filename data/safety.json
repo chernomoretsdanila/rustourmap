@@ -48,15 +48,15 @@
     83.0
    ],
    "EPI": [
-    24.6,
-    74.5
+    22.46,
+    71.51
    ]
   },
   "jenks_breaks": [
-   26.1,
-   50.2,
+   26.2,
+   50.1,
    69.1,
-   80.0
+   80.4
   ],
   "stop_rule": {
    "fields": [
@@ -96,14 +96,14 @@
    "CPI": "Corruption Perceptions Index 2025",
    "FSI": "Fragile States Index 2024",
    "HCI": "Numbeo Health Care Index 2026 Mid-Year",
-   "EPI": "Environmental Performance Index 2024"
+   "EPI": "Environmental Performance Index 2026"
   }
  },
  "countries": {
   "SGP": {
    "name_ru": "Сингапур",
    "name_en": "Singapore",
-   "score": 93.2,
+   "score": 93.0,
    "level": 1,
    "level_name": "Безопасно",
    "color": "#4caf50",
@@ -115,7 +115,7 @@
     "CPI": 84.0,
     "FSI": 25.4,
     "HCI": 71.9,
-    "EPI": 53.0
+    "EPI": 46.06
    },
    "normalized": {
     "GTI": 100.0,
@@ -124,7 +124,7 @@
     "CPI": 94.9,
     "FSI": 88.2,
     "HCI": 76.5,
-    "EPI": 56.9
+    "EPI": 48.1
    },
    "contribution": {
     "GTI": 39.0,
@@ -132,8 +132,8 @@
     "GPI": 19.0,
     "CPI": 8.54,
     "FSI": 5.29,
-    "HCI": 2.29,
-    "EPI": 1.71
+    "HCI": 2.3,
+    "EPI": 1.44
    },
    "imputed": [],
    "us_advisory": 1,
@@ -158,7 +158,7 @@
     "CPI": 88.0,
     "FSI": 14.3,
     "HCI": 77.5,
-    "EPI": 73.8
+    "EPI": 71.04
    },
    "normalized": {
     "GTI": 93.2,
@@ -167,16 +167,16 @@
     "CPI": 100.0,
     "FSI": 100.0,
     "HCI": 88.4,
-    "EPI": 98.6
+    "EPI": 99.0
    },
    "contribution": {
     "GTI": 36.35,
     "Crime": 16.2,
-    "GPI": 18.54,
+    "GPI": 18.53,
     "CPI": 9.0,
     "FSI": 6.0,
     "HCI": 2.65,
-    "EPI": 2.96
+    "EPI": 2.97
    },
    "imputed": [],
    "us_advisory": 1,
@@ -189,7 +189,7 @@
   "CHE": {
    "name_ru": "Швейцария",
    "name_en": "Switzerland",
-   "score": 89.7,
+   "score": 89.6,
    "level": 1,
    "level_name": "Безопасно",
    "color": "#4caf50",
@@ -201,7 +201,7 @@
     "CPI": 80.0,
     "FSI": 16.2,
     "HCI": 68.8,
-    "EPI": 67.8
+    "EPI": 64.06
    },
    "normalized": {
     "GTI": 91.3,
@@ -210,16 +210,16 @@
     "CPI": 89.7,
     "FSI": 98.0,
     "HCI": 70.0,
-    "EPI": 86.6
+    "EPI": 84.8
    },
    "contribution": {
-    "GTI": 35.61,
-    "Crime": 15.66,
+    "GTI": 35.59,
+    "Crime": 15.67,
     "GPI": 19.78,
-    "CPI": 8.07,
+    "CPI": 8.08,
     "FSI": 5.88,
     "HCI": 2.1,
-    "EPI": 2.6
+    "EPI": 2.54
    },
    "imputed": [],
    "us_advisory": 1,
@@ -232,7 +232,7 @@
   "JPN": {
    "name_ru": "Япония",
    "name_en": "Japan",
-   "score": 89.3,
+   "score": 89.6,
    "level": 1,
    "level_name": "Безопасно",
    "color": "#4caf50",
@@ -244,7 +244,7 @@
     "CPI": 71.0,
     "FSI": 30.2,
     "HCI": 79.9,
-    "EPI": 61.4
+    "EPI": 63.15
    },
    "normalized": {
     "GTI": 93.3,
@@ -253,16 +253,16 @@
     "CPI": 78.2,
     "FSI": 83.0,
     "HCI": 93.4,
-    "EPI": 73.7
+    "EPI": 83.0
    },
    "contribution": {
-    "GTI": 36.39,
-    "Crime": 17.42,
-    "GPI": 18.42,
+    "GTI": 36.4,
+    "Crime": 17.43,
+    "GPI": 18.41,
     "CPI": 7.04,
     "FSI": 4.98,
     "HCI": 2.8,
-    "EPI": 2.21
+    "EPI": 2.49
    },
    "imputed": [],
    "us_advisory": 1,
@@ -287,7 +287,7 @@
     "CPI": 58.0,
     "FSI": 39.8,
     "HCI": 73.8,
-    "EPI": 46.8
+    "EPI": 45.07
    },
    "normalized": {
     "GTI": 100.0,
@@ -296,7 +296,7 @@
     "CPI": 61.5,
     "FSI": 72.8,
     "HCI": 80.5,
-    "EPI": 44.5
+    "EPI": 46.1
    },
    "contribution": {
     "GTI": 39.0,
@@ -305,7 +305,7 @@
     "CPI": 5.54,
     "FSI": 4.37,
     "HCI": 2.42,
-    "EPI": 1.33
+    "EPI": 1.38
    },
    "imputed": [],
    "us_advisory": 3,
@@ -330,7 +330,7 @@
     "CPI": 81.0,
     "FSI": 15.9,
     "HCI": 68.1,
-    "EPI": 57.3
+    "EPI": 55.45
    },
    "normalized": {
     "GTI": 98.7,
@@ -339,16 +339,16 @@
     "CPI": 91.0,
     "FSI": 98.3,
     "HCI": 68.5,
-    "EPI": 65.5
+    "EPI": 67.3
    },
    "contribution": {
-    "GTI": 38.49,
+    "GTI": 38.48,
     "Crime": 9.48,
     "GPI": 20.0,
     "CPI": 8.19,
     "FSI": 5.9,
     "HCI": 2.05,
-    "EPI": 1.96
+    "EPI": 2.02
    },
    "imputed": [],
    "us_advisory": 1,
@@ -361,7 +361,7 @@
   "PRT": {
    "name_ru": "Португалия",
    "name_en": "Portugal",
-   "score": 85.4,
+   "score": 85.6,
    "level": 1,
    "level_name": "Безопасно",
    "color": "#4caf50",
@@ -373,7 +373,7 @@
     "CPI": 56.0,
     "FSI": 25.9,
     "HCI": 72.0,
-    "EPI": 61.9
+    "EPI": 62.74
    },
    "normalized": {
     "GTI": 95.1,
@@ -382,16 +382,16 @@
     "CPI": 59.0,
     "FSI": 87.6,
     "HCI": 76.7,
-    "EPI": 74.7
+    "EPI": 82.1
    },
    "contribution": {
-    "GTI": 37.09,
-    "Crime": 14.12,
-    "GPI": 19.08,
+    "GTI": 37.08,
+    "Crime": 14.11,
+    "GPI": 19.09,
     "CPI": 5.31,
     "FSI": 5.26,
     "HCI": 2.3,
-    "EPI": 2.24
+    "EPI": 2.46
    },
    "imputed": [],
    "us_advisory": 1,
@@ -404,7 +404,7 @@
   "HRV": {
    "name_ru": "Хорватия",
    "name_en": "Croatia",
-   "score": 84.9,
+   "score": 84.5,
    "level": 1,
    "level_name": "Безопасно",
    "color": "#4caf50",
@@ -416,7 +416,7 @@
     "CPI": 47.0,
     "FSI": 45.9,
     "HCI": 65.0,
-    "EPI": 62.3
+    "EPI": 52.82
    },
    "normalized": {
     "GTI": 100.0,
@@ -425,16 +425,16 @@
     "CPI": 47.4,
     "FSI": 66.3,
     "HCI": 61.9,
-    "EPI": 75.6
+    "EPI": 61.9
    },
    "contribution": {
     "GTI": 39.0,
-    "Crime": 16.54,
+    "Crime": 16.53,
     "GPI": 17.0,
     "CPI": 4.27,
     "FSI": 3.98,
     "HCI": 1.86,
-    "EPI": 2.27
+    "EPI": 1.86
    },
    "imputed": [],
    "us_advisory": 1,
@@ -447,7 +447,7 @@
   "ARE": {
    "name_ru": "ОАЭ",
    "name_en": "United Arab Emirates",
-   "score": 84.6,
+   "score": 84.7,
    "level": 1,
    "level_name": "Безопасно",
    "color": "#4caf50",
@@ -459,7 +459,7 @@
     "CPI": 69.0,
     "FSI": 34.7,
     "HCI": 70.8,
-    "EPI": 51.6
+    "EPI": 50.16
    },
    "normalized": {
     "GTI": 91.3,
@@ -468,16 +468,16 @@
     "CPI": 75.6,
     "FSI": 78.3,
     "HCI": 74.2,
-    "EPI": 54.1
+    "EPI": 56.5
    },
    "contribution": {
-    "GTI": 35.61,
+    "GTI": 35.59,
     "Crime": 20.0,
     "GPI": 13.66,
-    "CPI": 6.8,
+    "CPI": 6.81,
     "FSI": 4.7,
     "HCI": 2.23,
-    "EPI": 1.62
+    "EPI": 1.69
    },
    "imputed": [],
    "us_advisory": 3,
@@ -490,7 +490,7 @@
   "AUT": {
    "name_ru": "Австрия",
    "name_en": "Austria",
-   "score": 84.2,
+   "score": 84.3,
    "level": 1,
    "level_name": "Безопасно",
    "color": "#4caf50",
@@ -502,7 +502,7 @@
     "CPI": 69.0,
     "FSI": 23.1,
     "HCI": 77.5,
-    "EPI": 68.9
+    "EPI": 66.8
    },
    "normalized": {
     "GTI": 82.5,
@@ -511,16 +511,16 @@
     "CPI": 75.6,
     "FSI": 90.6,
     "HCI": 88.4,
-    "EPI": 88.8
+    "EPI": 90.4
    },
    "contribution": {
-    "GTI": 32.18,
+    "GTI": 32.19,
     "Crime": 15.34,
-    "GPI": 19.16,
-    "CPI": 6.8,
+    "GPI": 19.15,
+    "CPI": 6.81,
     "FSI": 5.44,
     "HCI": 2.65,
-    "EPI": 2.66
+    "EPI": 2.71
    },
    "imputed": [],
    "us_advisory": 1,
@@ -533,7 +533,7 @@
   "KOR": {
    "name_ru": "Республика Корея",
    "name_en": "South Korea",
-   "score": 83.0,
+   "score": 83.3,
    "level": 1,
    "level_name": "Безопасно",
    "color": "#4caf50",
@@ -545,7 +545,7 @@
     "CPI": 63.0,
     "FSI": 29.8,
     "HCI": 83.0,
-    "EPI": 50.6
+    "EPI": 52.65
    },
    "normalized": {
     "GTI": 96.1,
@@ -554,16 +554,16 @@
     "CPI": 67.9,
     "FSI": 83.5,
     "HCI": 100.0,
-    "EPI": 52.1
+    "EPI": 61.5
    },
    "contribution": {
-    "GTI": 37.48,
-    "Crime": 15.18,
-    "GPI": 14.62,
-    "CPI": 6.11,
+    "GTI": 37.49,
+    "Crime": 15.19,
+    "GPI": 14.61,
+    "CPI": 6.12,
     "FSI": 5.01,
     "HCI": 3.0,
-    "EPI": 1.56
+    "EPI": 1.85
    },
    "imputed": [],
    "us_advisory": 1,
@@ -576,7 +576,7 @@
   "HUN": {
    "name_ru": "Венгрия",
    "name_en": "Hungary",
-   "score": 81.7,
+   "score": 81.6,
    "level": 1,
    "level_name": "Безопасно",
    "color": "#4caf50",
@@ -588,7 +588,7 @@
     "CPI": 40.0,
     "FSI": 46.2,
     "HCI": 54.2,
-    "EPI": 59.8
+    "EPI": 54.78
    },
    "normalized": {
     "GTI": 100.0,
@@ -597,7 +597,7 @@
     "CPI": 38.5,
     "FSI": 66.0,
     "HCI": 39.1,
-    "EPI": 70.5
+    "EPI": 65.9
    },
    "contribution": {
     "GTI": 39.0,
@@ -606,7 +606,7 @@
     "CPI": 3.46,
     "FSI": 3.96,
     "HCI": 1.17,
-    "EPI": 2.11
+    "EPI": 1.98
    },
    "imputed": [],
    "us_advisory": 1,
@@ -619,7 +619,7 @@
   "BGR": {
    "name_ru": "Болгария",
    "name_en": "Bulgaria",
-   "score": 80.0,
+   "score": 80.4,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -631,7 +631,7 @@
     "CPI": 40.0,
     "FSI": 49.4,
     "HCI": 58.2,
-    "EPI": 56.2
+    "EPI": 59.77
    },
    "normalized": {
     "GTI": 100.0,
@@ -640,16 +640,16 @@
     "CPI": 38.5,
     "FSI": 62.6,
     "HCI": 47.6,
-    "EPI": 63.3
+    "EPI": 76.1
    },
    "contribution": {
     "GTI": 39.0,
     "Crime": 13.54,
     "GPI": 16.9,
     "CPI": 3.46,
-    "FSI": 3.76,
+    "FSI": 3.75,
     "HCI": 1.43,
-    "EPI": 1.9
+    "EPI": 2.28
    },
    "imputed": [],
    "us_advisory": 1,
@@ -662,7 +662,7 @@
   "MNE": {
    "name_ru": "Черногория",
    "name_en": "Montenegro",
-   "score": 79.1,
+   "score": 79.2,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -674,7 +674,7 @@
     "CPI": 46.0,
     "FSI": 56.9,
     "HCI": 48.7,
-    "EPI": 47.7
+    "EPI": 46.38
    },
    "normalized": {
     "GTI": 100.0,
@@ -683,16 +683,16 @@
     "CPI": 46.2,
     "FSI": 54.6,
     "HCI": 27.5,
-    "EPI": 46.3
+    "EPI": 48.8
    },
    "contribution": {
     "GTI": 39.0,
     "Crime": 14.02,
-    "GPI": 16.42,
-    "CPI": 4.16,
+    "GPI": 16.43,
+    "CPI": 4.15,
     "FSI": 3.28,
     "HCI": 0.82,
-    "EPI": 1.39
+    "EPI": 1.46
    },
    "imputed": [],
    "us_advisory": 1,
@@ -705,7 +705,7 @@
   "ESP": {
    "name_ru": "Испания",
    "name_en": "Spain",
-   "score": 78.9,
+   "score": 79.3,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -717,7 +717,7 @@
     "CPI": 55.0,
     "FSI": 44.0,
     "HCI": 76.7,
-    "EPI": 64.0
+    "EPI": 66.28
    },
    "normalized": {
     "GTI": 90.7,
@@ -726,16 +726,16 @@
     "CPI": 57.7,
     "FSI": 68.3,
     "HCI": 86.7,
-    "EPI": 79.0
+    "EPI": 89.3
    },
    "contribution": {
-    "GTI": 35.37,
+    "GTI": 35.39,
     "Crime": 12.68,
     "GPI": 16.62,
     "CPI": 5.19,
     "FSI": 4.1,
     "HCI": 2.6,
-    "EPI": 2.37
+    "EPI": 2.68
    },
    "imputed": [],
    "us_advisory": 2,
@@ -760,7 +760,7 @@
     "CPI": 75.0,
     "FSI": 18.6,
     "HCI": 68.6,
-    "EPI": 61.1
+    "EPI": 57.78
    },
    "normalized": {
     "GTI": 84.5,
@@ -769,16 +769,16 @@
     "CPI": 83.3,
     "FSI": 95.4,
     "HCI": 69.6,
-    "EPI": 73.1
+    "EPI": 72.0
    },
    "contribution": {
-    "GTI": 32.95,
-    "Crime": 10.44,
+    "GTI": 32.94,
+    "Crime": 10.43,
     "GPI": 18.02,
     "CPI": 7.5,
     "FSI": 5.72,
     "HCI": 2.09,
-    "EPI": 2.19
+    "EPI": 2.16
    },
    "imputed": [],
    "us_advisory": 1,
@@ -803,7 +803,7 @@
     "CPI": 46.0,
     "FSI": 68.1,
     "HCI": 60.0,
-    "EPI": 44.9
+    "EPI": 43.05
    },
    "normalized": {
     "GTI": 95.1,
@@ -812,16 +812,16 @@
     "CPI": 46.2,
     "FSI": 42.6,
     "HCI": 51.4,
-    "EPI": 40.7
+    "EPI": 42.0
    },
    "contribution": {
-    "GTI": 37.09,
-    "Crime": 17.48,
+    "GTI": 37.08,
+    "Crime": 17.49,
     "GPI": 14.76,
-    "CPI": 4.16,
+    "CPI": 4.15,
     "FSI": 2.56,
     "HCI": 1.54,
-    "EPI": 1.22
+    "EPI": 1.26
    },
    "imputed": [],
    "us_advisory": 2,
@@ -834,7 +834,7 @@
   "UZB": {
    "name_ru": "Узбекистан",
    "name_en": "Uzbekistan",
-   "score": 78.3,
+   "score": 78.0,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -846,7 +846,7 @@
     "CPI": 31.0,
     "FSI": 64.8,
     "HCI": 64.4,
-    "EPI": 42.6
+    "EPI": 34.79
    },
    "normalized": {
     "GTI": 98.7,
@@ -855,16 +855,16 @@
     "CPI": 26.9,
     "FSI": 46.2,
     "HCI": 60.7,
-    "EPI": 36.1
+    "EPI": 25.1
    },
    "contribution": {
-    "GTI": 38.49,
+    "GTI": 38.48,
     "Crime": 15.9,
     "GPI": 15.84,
     "CPI": 2.42,
     "FSI": 2.77,
     "HCI": 1.82,
-    "EPI": 1.08
+    "EPI": 0.75
    },
    "imputed": [],
    "us_advisory": 1,
@@ -889,7 +889,7 @@
     "CPI": 59.0,
     "FSI": 37.7,
     "HCI": 75.6,
-    "EPI": 65.5
+    "EPI": 62.9
    },
    "normalized": {
     "GTI": 73.6,
@@ -898,16 +898,16 @@
     "CPI": 62.8,
     "FSI": 75.1,
     "HCI": 84.4,
-    "EPI": 82.0
+    "EPI": 82.4
    },
    "contribution": {
-    "GTI": 28.7,
+    "GTI": 28.72,
     "Crime": 16.08,
-    "GPI": 18.1,
+    "GPI": 18.11,
     "CPI": 5.65,
-    "FSI": 4.51,
+    "FSI": 4.5,
     "HCI": 2.53,
-    "EPI": 2.46
+    "EPI": 2.47
    },
    "imputed": [],
    "us_advisory": 1,
@@ -920,7 +920,7 @@
   "SAU": {
    "name_ru": "Саудовская Аравия",
    "name_en": "Saudi Arabia",
-   "score": 77.3,
+   "score": 77.2,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -932,7 +932,7 @@
     "CPI": 57.0,
     "FSI": 63.2,
     "HCI": 62.2,
-    "EPI": 42.5
+    "EPI": 38.74
    },
    "normalized": {
     "GTI": 94.8,
@@ -941,16 +941,16 @@
     "CPI": 60.3,
     "FSI": 47.9,
     "HCI": 56.0,
-    "EPI": 35.9
+    "EPI": 33.2
    },
    "contribution": {
-    "GTI": 36.97,
-    "Crime": 17.14,
-    "GPI": 12.14,
-    "CPI": 5.43,
+    "GTI": 36.98,
+    "Crime": 17.13,
+    "GPI": 12.13,
+    "CPI": 5.42,
     "FSI": 2.87,
     "HCI": 1.68,
-    "EPI": 1.08
+    "EPI": 1.0
    },
    "imputed": [],
    "us_advisory": 3,
@@ -963,7 +963,7 @@
   "CYP": {
    "name_ru": "Кипр",
    "name_en": "Cyprus",
-   "score": 77.2,
+   "score": 77.3,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -975,7 +975,7 @@
     "CPI": 55.0,
     "FSI": 54.1,
     "HCI": 56.6,
-    "EPI": 53.9
+    "EPI": 53.34
    },
    "normalized": {
     "GTI": 97.9,
@@ -984,16 +984,16 @@
     "CPI": 57.7,
     "FSI": 57.6,
     "HCI": 44.2,
-    "EPI": 58.7
+    "EPI": 63.0
    },
    "contribution": {
-    "GTI": 38.18,
+    "GTI": 38.2,
     "Crime": 14.02,
     "GPI": 13.22,
     "CPI": 5.19,
-    "FSI": 3.46,
+    "FSI": 3.45,
     "HCI": 1.33,
-    "EPI": 1.76
+    "EPI": 1.89
    },
    "imputed": [],
    "us_advisory": 1,
@@ -1018,7 +1018,7 @@
     "CPI": 52.0,
     "FSI": 41.7,
     "HCI": 58.0,
-    "EPI": 64.2
+    "EPI": 61.77
    },
    "normalized": {
     "GTI": 80.4,
@@ -1027,16 +1027,16 @@
     "CPI": 53.8,
     "FSI": 70.8,
     "HCI": 47.1,
-    "EPI": 79.4
+    "EPI": 80.1
    },
    "contribution": {
-    "GTI": 31.36,
-    "Crime": 15.48,
-    "GPI": 17.04,
-    "CPI": 4.84,
+    "GTI": 31.35,
+    "Crime": 15.49,
+    "GPI": 17.05,
+    "CPI": 4.85,
     "FSI": 4.25,
     "HCI": 1.41,
-    "EPI": 2.38
+    "EPI": 2.4
    },
    "imputed": [],
    "us_advisory": 1,
@@ -1049,7 +1049,7 @@
   "VNM": {
    "name_ru": "Вьетнам",
    "name_en": "Vietnam",
-   "score": 75.5,
+   "score": 75.6,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -1061,7 +1061,7 @@
     "CPI": 41.0,
     "FSI": 56.2,
     "HCI": 62.8,
-    "EPI": 24.6
+    "EPI": 23.82
    },
    "normalized": {
     "GTI": 100.0,
@@ -1070,16 +1070,16 @@
     "CPI": 39.7,
     "FSI": 55.3,
     "HCI": 57.3,
-    "EPI": 0.0
+    "EPI": 2.8
    },
    "contribution": {
     "GTI": 39.0,
-    "Crime": 12.16,
-    "GPI": 15.7,
-    "CPI": 3.57,
+    "Crime": 12.17,
+    "GPI": 15.71,
+    "CPI": 3.58,
     "FSI": 3.32,
     "HCI": 1.72,
-    "EPI": 0.0
+    "EPI": 0.08
    },
    "imputed": [],
    "us_advisory": 1,
@@ -1092,7 +1092,7 @@
   "GEO": {
    "name_ru": "Грузия",
    "name_en": "Georgia",
-   "score": 74.6,
+   "score": 74.5,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -1104,7 +1104,7 @@
     "CPI": 50.0,
     "FSI": 69.3,
     "HCI": 56.5,
-    "EPI": 47.3
+    "EPI": 42.67
    },
    "normalized": {
     "GTI": 94.1,
@@ -1113,16 +1113,16 @@
     "CPI": 51.3,
     "FSI": 41.4,
     "HCI": 44.0,
-    "EPI": 45.5
+    "EPI": 41.2
    },
    "contribution": {
     "GTI": 36.7,
     "Crime": 16.02,
-    "GPI": 12.14,
+    "GPI": 12.15,
     "CPI": 4.62,
     "FSI": 2.48,
     "HCI": 1.32,
-    "EPI": 1.36
+    "EPI": 1.24
    },
    "imputed": [],
    "us_advisory": 1,
@@ -1135,7 +1135,7 @@
   "KAZ": {
    "name_ru": "Казахстан",
    "name_en": "Kazakhstan",
-   "score": 74.3,
+   "score": 74.1,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -1147,7 +1147,7 @@
     "CPI": 38.0,
     "FSI": 57.8,
     "HCI": 60.7,
-    "EPI": 47.8
+    "EPI": 41.26
    },
    "normalized": {
     "GTI": 100.0,
@@ -1156,16 +1156,16 @@
     "CPI": 35.9,
     "FSI": 53.6,
     "HCI": 52.9,
-    "EPI": 46.5
+    "EPI": 38.3
    },
    "contribution": {
     "GTI": 39.0,
-    "Crime": 10.56,
-    "GPI": 15.36,
+    "Crime": 10.55,
+    "GPI": 15.35,
     "CPI": 3.23,
     "FSI": 3.22,
     "HCI": 1.59,
-    "EPI": 1.4
+    "EPI": 1.15
    },
    "imputed": [],
    "us_advisory": 1,
@@ -1178,7 +1178,7 @@
   "OMN": {
    "name_ru": "Оман",
    "name_en": "Oman",
-   "score": 73.8,
+   "score": 73.7,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -1190,7 +1190,7 @@
     "CPI": 52.0,
     "FSI": 47.4,
     "HCI": 62.7,
-    "EPI": 51.3
+    "EPI": 48.5
    },
    "normalized": {
     "GTI": 73.4,
@@ -1199,16 +1199,16 @@
     "CPI": 53.8,
     "FSI": 64.7,
     "HCI": 57.1,
-    "EPI": 53.5
+    "EPI": 53.1
    },
    "contribution": {
-    "GTI": 28.63,
-    "Crime": 18.6,
-    "GPI": 14.5,
-    "CPI": 4.84,
+    "GTI": 28.62,
+    "Crime": 18.59,
+    "GPI": 14.49,
+    "CPI": 4.85,
     "FSI": 3.88,
     "HCI": 1.71,
-    "EPI": 1.6
+    "EPI": 1.59
    },
    "imputed": [],
    "us_advisory": 3,
@@ -1221,7 +1221,7 @@
   "ITA": {
    "name_ru": "Италия",
    "name_en": "Italy",
-   "score": 73.6,
+   "score": 73.8,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -1233,7 +1233,7 @@
     "CPI": 53.0,
     "FSI": 41.1,
     "HCI": 64.8,
-    "EPI": 60.3
+    "EPI": 61.56
    },
    "normalized": {
     "GTI": 88.3,
@@ -1242,16 +1242,16 @@
     "CPI": 55.1,
     "FSI": 71.4,
     "HCI": 61.5,
-    "EPI": 71.5
+    "EPI": 79.7
    },
    "contribution": {
-    "GTI": 34.44,
+    "GTI": 34.46,
     "Crime": 9.9,
-    "GPI": 16.0,
+    "GPI": 15.99,
     "CPI": 4.96,
-    "FSI": 4.28,
-    "HCI": 1.84,
-    "EPI": 2.15
+    "FSI": 4.29,
+    "HCI": 1.85,
+    "EPI": 2.39
    },
    "imputed": [],
    "us_advisory": 2,
@@ -1264,7 +1264,7 @@
   "CUB": {
    "name_ru": "Куба",
    "name_en": "Cuba",
-   "score": 73.5,
+   "score": 73.3,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -1276,7 +1276,7 @@
     "CPI": 40.0,
     "FSI": 59.1,
     "HCI": 59.3,
-    "EPI": 52.5
+    "EPI": 46.08
    },
    "normalized": {
     "GTI": 100.0,
@@ -1285,18 +1285,20 @@
     "CPI": 38.5,
     "FSI": 52.2,
     "HCI": 49.9,
-    "EPI": 55.9
+    "EPI": 48.2
    },
    "contribution": {
     "GTI": 39.0,
-    "Crime": 13.4,
-    "GPI": 11.36,
+    "Crime": 13.39,
+    "GPI": 11.35,
     "CPI": 3.46,
     "FSI": 3.13,
     "HCI": 1.5,
-    "EPI": 1.68
+    "EPI": 1.44
    },
-   "imputed": [],
+   "imputed": [
+    "EPI"
+   ],
    "us_advisory": 2,
    "ru_trips_2025": 87100,
    "description": "",
@@ -1322,7 +1324,7 @@
     "CPI": 52.0,
     "FSI": 53.1,
     "HCI": 70.7,
-    "EPI": 41.0
+    "EPI": 39.52
    },
    "normalized": {
     "GTI": 87.3,
@@ -1331,16 +1333,16 @@
     "CPI": 53.8,
     "FSI": 58.6,
     "HCI": 74.0,
-    "EPI": 32.9
+    "EPI": 34.8
    },
    "contribution": {
-    "GTI": 34.05,
+    "GTI": 34.03,
     "Crime": 9.72,
-    "GPI": 18.16,
-    "CPI": 4.84,
+    "GPI": 18.15,
+    "CPI": 4.85,
     "FSI": 3.52,
     "HCI": 2.22,
-    "EPI": 0.99
+    "EPI": 1.04
    },
    "imputed": [],
    "us_advisory": 1,
@@ -1353,7 +1355,7 @@
   "LKA": {
    "name_ru": "Шри-Ланка",
    "name_en": "Sri Lanka",
-   "score": 71.4,
+   "score": 71.6,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -1365,7 +1367,7 @@
     "CPI": 35.0,
     "FSI": 88.2,
     "HCI": 70.8,
-    "EPI": 38.8
+    "EPI": 39.58
    },
    "normalized": {
     "GTI": 100.0,
@@ -1374,16 +1376,16 @@
     "CPI": 32.1,
     "FSI": 21.2,
     "HCI": 74.2,
-    "EPI": 28.5
+    "EPI": 34.9
    },
    "contribution": {
     "GTI": 39.0,
     "Crime": 11.36,
     "GPI": 13.84,
-    "CPI": 2.89,
+    "CPI": 2.88,
     "FSI": 1.27,
     "HCI": 2.23,
-    "EPI": 0.85
+    "EPI": 1.05
    },
    "imputed": [],
    "us_advisory": 2,
@@ -1396,7 +1398,7 @@
   "AZE": {
    "name_ru": "Азербайджан",
    "name_en": "Azerbaijan",
-   "score": 70.8,
+   "score": 70.9,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -1408,7 +1410,7 @@
     "CPI": 30.0,
     "FSI": 72.8,
     "HCI": 49.0,
-    "EPI": 40.5
+    "EPI": 39.76
    },
    "normalized": {
     "GTI": 98.6,
@@ -1417,16 +1419,16 @@
     "CPI": 25.6,
     "FSI": 37.6,
     "HCI": 28.1,
-    "EPI": 31.9
+    "EPI": 35.3
    },
    "contribution": {
-    "GTI": 38.45,
-    "Crime": 14.64,
+    "GTI": 38.44,
+    "Crime": 14.65,
     "GPI": 11.32,
-    "CPI": 2.3,
+    "CPI": 2.31,
     "FSI": 2.26,
     "HCI": 0.84,
-    "EPI": 0.96
+    "EPI": 1.06
    },
    "imputed": [],
    "us_advisory": 3,
@@ -1439,7 +1441,7 @@
   "MAR": {
    "name_ru": "Марокко",
    "name_en": "Morocco",
-   "score": 70.5,
+   "score": 70.3,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -1451,7 +1453,7 @@
     "CPI": 39.0,
     "FSI": 68.8,
     "HCI": 46.8,
-    "EPI": 39.5
+    "EPI": 33.11
    },
    "normalized": {
     "GTI": 100.0,
@@ -1460,16 +1462,16 @@
     "CPI": 37.2,
     "FSI": 41.9,
     "HCI": 23.5,
-    "EPI": 29.9
+    "EPI": 21.7
    },
    "contribution": {
     "GTI": 39.0,
-    "Crime": 9.98,
-    "GPI": 14.1,
+    "Crime": 9.99,
+    "GPI": 14.09,
     "CPI": 3.35,
     "FSI": 2.51,
     "HCI": 0.7,
-    "EPI": 0.9
+    "EPI": 0.65
    },
    "imputed": [],
    "us_advisory": 2,
@@ -1494,7 +1496,7 @@
     "CPI": 43.0,
     "FSI": 64.4,
     "HCI": 69.6,
-    "EPI": 35.4
+    "EPI": 33.88
    },
    "normalized": {
     "GTI": 84.7,
@@ -1503,16 +1505,16 @@
     "CPI": 42.3,
     "FSI": 46.6,
     "HCI": 71.7,
-    "EPI": 21.6
+    "EPI": 23.3
    },
    "contribution": {
-    "GTI": 33.03,
-    "Crime": 17.18,
-    "GPI": 10.36,
+    "GTI": 33.04,
+    "Crime": 17.19,
+    "GPI": 10.35,
     "CPI": 3.81,
     "FSI": 2.8,
     "HCI": 2.15,
-    "EPI": 0.65
+    "EPI": 0.7
    },
    "imputed": [],
    "us_advisory": 2,
@@ -1525,7 +1527,7 @@
   "SRB": {
    "name_ru": "Сербия",
    "name_en": "Serbia",
-   "score": 70.0,
+   "score": 69.9,
    "level": 2,
    "level_name": "Низкий риск",
    "color": "#8bc34a",
@@ -1537,7 +1539,7 @@
     "CPI": 33.0,
     "FSI": 67.8,
     "HCI": 52.1,
-    "EPI": 49.8
+    "EPI": 44.94
    },
    "normalized": {
     "GTI": 90.9,
@@ -1546,16 +1548,16 @@
     "CPI": 29.5,
     "FSI": 43.0,
     "HCI": 34.7,
-    "EPI": 50.5
+    "EPI": 45.8
    },
    "contribution": {
-    "GTI": 35.45,
-    "Crime": 13.04,
+    "GTI": 35.44,
+    "Crime": 13.03,
     "GPI": 13.74,
     "CPI": 2.65,
     "FSI": 2.58,
     "HCI": 1.04,
-    "EPI": 1.51
+    "EPI": 1.37
    },
    "imputed": [],
    "us_advisory": 2,
@@ -1568,7 +1570,7 @@
   "KGZ": {
    "name_ru": "Киргизия",
    "name_en": "Kyrgyzstan",
-   "score": 69.1,
+   "score": 68.6,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -1580,7 +1582,7 @@
     "CPI": 26.0,
     "FSI": 74.9,
     "HCI": 55.6,
-    "EPI": 42.8
+    "EPI": 33.75
    },
    "normalized": {
     "GTI": 100.0,
@@ -1589,16 +1591,16 @@
     "CPI": 20.5,
     "FSI": 35.4,
     "HCI": 42.1,
-    "EPI": 36.5
+    "EPI": 23.0
    },
    "contribution": {
     "GTI": 39.0,
-    "Crime": 9.26,
+    "Crime": 9.27,
     "GPI": 14.46,
-    "CPI": 1.84,
+    "CPI": 1.85,
     "FSI": 2.12,
     "HCI": 1.26,
-    "EPI": 1.09
+    "EPI": 0.69
    },
    "imputed": [],
    "us_advisory": 1,
@@ -1614,7 +1616,7 @@
   "NPL": {
    "name_ru": "Непал",
    "name_en": "Nepal",
-   "score": 68.9,
+   "score": 69.1,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -1626,7 +1628,7 @@
     "CPI": 34.0,
     "FSI": 78.0,
     "HCI": 58.1,
-    "EPI": 33.1
+    "EPI": 33.99
    },
    "normalized": {
     "GTI": 96.6,
@@ -1635,16 +1637,16 @@
     "CPI": 30.8,
     "FSI": 32.1,
     "HCI": 47.4,
-    "EPI": 17.0
+    "EPI": 23.5
    },
    "contribution": {
-    "GTI": 37.67,
-    "Crime": 13.28,
-    "GPI": 11.3,
+    "GTI": 37.69,
+    "Crime": 13.27,
+    "GPI": 11.31,
     "CPI": 2.77,
     "FSI": 1.93,
     "HCI": 1.42,
-    "EPI": 0.51
+    "EPI": 0.71
    },
    "imputed": [],
    "us_advisory": 2,
@@ -1657,7 +1659,7 @@
   "GBR": {
    "name_ru": "Великобритания",
    "name_en": "United Kingdom",
-   "score": 67.5,
+   "score": 67.7,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -1669,7 +1671,7 @@
     "CPI": 70.0,
     "FSI": 40.8,
     "HCI": 72.4,
-    "EPI": 72.6
+    "EPI": 71.51
    },
    "normalized": {
     "GTI": 65.8,
@@ -1678,16 +1680,16 @@
     "CPI": 76.9,
     "FSI": 71.7,
     "HCI": 77.6,
-    "EPI": 96.2
+    "EPI": 100.0
    },
    "contribution": {
-    "GTI": 25.66,
+    "GTI": 25.65,
     "Crime": 9.66,
     "GPI": 15.8,
     "CPI": 6.92,
     "FSI": 4.3,
     "HCI": 2.33,
-    "EPI": 2.89
+    "EPI": 3.0
    },
    "imputed": [],
    "us_advisory": 2,
@@ -1700,7 +1702,7 @@
   "AUS": {
    "name_ru": "Австралия",
    "name_en": "Australia",
-   "score": 67.0,
+   "score": 66.9,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -1712,7 +1714,7 @@
     "CPI": 76.0,
     "FSI": 19.6,
     "HCI": 71.8,
-    "EPI": 63.1
+    "EPI": 59.4
    },
    "normalized": {
     "GTI": 56.5,
@@ -1721,16 +1723,16 @@
     "CPI": 84.6,
     "FSI": 94.3,
     "HCI": 76.3,
-    "EPI": 77.2
+    "EPI": 75.3
    },
    "contribution": {
-    "GTI": 22.04,
+    "GTI": 22.02,
     "Crime": 9.9,
-    "GPI": 17.18,
-    "CPI": 7.61,
+    "GPI": 17.19,
+    "CPI": 7.62,
     "FSI": 5.66,
     "HCI": 2.29,
-    "EPI": 2.32
+    "EPI": 2.26
    },
    "imputed": [],
    "us_advisory": 1,
@@ -1743,7 +1745,7 @@
   "DOM": {
    "name_ru": "Доминиканская Республика",
    "name_en": "Dominican Republic",
-   "score": 66.7,
+   "score": 66.3,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -1755,7 +1757,7 @@
     "CPI": 37.0,
     "FSI": 60.2,
     "HCI": 58.3,
-    "EPI": 47.7
+    "EPI": 38.39
    },
    "normalized": {
     "GTI": 100.0,
@@ -1764,16 +1766,16 @@
     "CPI": 34.6,
     "FSI": 51.1,
     "HCI": 47.8,
-    "EPI": 46.3
+    "EPI": 32.5
    },
    "contribution": {
     "GTI": 39.0,
-    "Crime": 6.24,
-    "GPI": 12.44,
-    "CPI": 3.11,
-    "FSI": 3.07,
+    "Crime": 6.25,
+    "GPI": 12.45,
+    "CPI": 3.12,
+    "FSI": 3.06,
     "HCI": 1.43,
-    "EPI": 1.39
+    "EPI": 0.97
    },
    "imputed": [],
    "us_advisory": 2,
@@ -1786,7 +1788,7 @@
   "BLR": {
    "name_ru": "Беларусь",
    "name_en": "Belarus",
-   "score": 66.6,
+   "score": 66.1,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -1798,7 +1800,7 @@
     "CPI": 31.0,
     "FSI": 68.7,
     "HCI": 49.8,
-    "EPI": 58.2
+    "EPI": 47.03
    },
    "normalized": {
     "GTI": 98.6,
@@ -1807,16 +1809,16 @@
     "CPI": 26.9,
     "FSI": 42.0,
     "HCI": 29.8,
-    "EPI": 67.3
+    "EPI": 50.1
    },
    "contribution": {
-    "GTI": 38.45,
+    "GTI": 38.44,
     "Crime": 9.78,
     "GPI": 10.52,
     "CPI": 2.42,
     "FSI": 2.52,
     "HCI": 0.89,
-    "EPI": 2.02
+    "EPI": 1.5
    },
    "imputed": [],
    "us_advisory": 4,
@@ -1829,7 +1831,7 @@
   "ARG": {
    "name_ru": "Аргентина",
    "name_en": "Argentina",
-   "score": 66.3,
+   "score": 66.4,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -1841,7 +1843,7 @@
     "CPI": 36.0,
     "FSI": 44.2,
     "HCI": 67.8,
-    "EPI": 47.0
+    "EPI": 46.06
    },
    "normalized": {
     "GTI": 94.7,
@@ -1850,16 +1852,16 @@
     "CPI": 33.3,
     "FSI": 68.1,
     "HCI": 67.9,
-    "EPI": 44.9
+    "EPI": 48.1
    },
    "contribution": {
     "GTI": 36.93,
-    "Crime": 5.24,
-    "GPI": 13.7,
+    "Crime": 5.23,
+    "GPI": 13.71,
     "CPI": 3.0,
     "FSI": 4.09,
     "HCI": 2.04,
-    "EPI": 1.35
+    "EPI": 1.44
    },
    "imputed": [],
    "us_advisory": 1,
@@ -1872,7 +1874,7 @@
   "DEU": {
    "name_ru": "Германия",
    "name_en": "Germany",
-   "score": 66.1,
+   "score": 66.0,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -1884,7 +1886,7 @@
     "CPI": 77.0,
     "FSI": 24.0,
     "HCI": 71.3,
-    "EPI": 74.5
+    "EPI": 69.93
    },
    "normalized": {
     "GTI": 48.1,
@@ -1893,16 +1895,16 @@
     "CPI": 85.9,
     "FSI": 89.7,
     "HCI": 75.3,
-    "EPI": 100.0
+    "EPI": 96.8
    },
    "contribution": {
-    "GTI": 18.76,
-    "Crime": 12.4,
-    "GPI": 16.58,
+    "GTI": 18.77,
+    "Crime": 12.41,
+    "GPI": 16.59,
     "CPI": 7.73,
     "FSI": 5.38,
     "HCI": 2.26,
-    "EPI": 3.0
+    "EPI": 2.9
    },
    "imputed": [],
    "us_advisory": 2,
@@ -1915,7 +1917,7 @@
   "JOR": {
    "name_ru": "Иордания",
    "name_en": "Jordan",
-   "score": 64.8,
+   "score": 64.9,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -1927,7 +1929,7 @@
     "CPI": 50.0,
     "FSI": 74.3,
     "HCI": 65.6,
-    "EPI": 47.3
+    "EPI": 46.72
    },
    "normalized": {
     "GTI": 73.5,
@@ -1936,16 +1938,16 @@
     "CPI": 51.3,
     "FSI": 36.0,
     "HCI": 63.2,
-    "EPI": 45.5
+    "EPI": 49.5
    },
    "contribution": {
-    "GTI": 28.67,
-    "Crime": 12.22,
-    "GPI": 13.8,
+    "GTI": 28.68,
+    "Crime": 12.23,
+    "GPI": 13.81,
     "CPI": 4.62,
     "FSI": 2.16,
     "HCI": 1.9,
-    "EPI": 1.36
+    "EPI": 1.48
    },
    "imputed": [],
    "us_advisory": 3,
@@ -1958,7 +1960,7 @@
   "TUN": {
    "name_ru": "Тунис",
    "name_en": "Tunisia",
-   "score": 64.8,
+   "score": 64.7,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -1970,7 +1972,7 @@
     "CPI": 39.0,
     "FSI": 67.2,
     "HCI": 56.6,
-    "EPI": 45.3
+    "EPI": 41.05
    },
    "normalized": {
     "GTI": 82.2,
@@ -1979,16 +1981,16 @@
     "CPI": 37.2,
     "FSI": 43.6,
     "HCI": 44.2,
-    "EPI": 41.5
+    "EPI": 37.9
    },
    "contribution": {
-    "GTI": 32.06,
+    "GTI": 32.08,
     "Crime": 10.76,
     "GPI": 13.44,
     "CPI": 3.35,
     "FSI": 2.62,
     "HCI": 1.33,
-    "EPI": 1.24
+    "EPI": 1.14
    },
    "imputed": [],
    "us_advisory": 2,
@@ -2001,7 +2003,7 @@
   "KHM": {
    "name_ru": "Камбоджа",
    "name_en": "Cambodia",
-   "score": 63.9,
+   "score": 64.0,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -2013,7 +2015,7 @@
     "CPI": 20.0,
     "FSI": 78.6,
     "HCI": 51.6,
-    "EPI": 31.2
+    "EPI": 31.21
    },
    "normalized": {
     "GTI": 97.3,
@@ -2022,16 +2024,16 @@
     "CPI": 12.8,
     "FSI": 31.4,
     "HCI": 33.6,
-    "EPI": 13.2
+    "EPI": 17.8
    },
    "contribution": {
-    "GTI": 37.95,
+    "GTI": 37.94,
     "Crime": 9.48,
-    "GPI": 12.04,
+    "GPI": 12.05,
     "CPI": 1.15,
-    "FSI": 1.88,
+    "FSI": 1.89,
     "HCI": 1.01,
-    "EPI": 0.4
+    "EPI": 0.54
    },
    "imputed": [],
    "us_advisory": 2,
@@ -2044,7 +2046,7 @@
   "GRC": {
    "name_ru": "Греция",
    "name_en": "Greece",
-   "score": 63.4,
+   "score": 63.5,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -2056,7 +2058,7 @@
     "CPI": 50.0,
     "FSI": 54.7,
     "HCI": 58.6,
-    "EPI": 67.3
+    "EPI": 66.03
    },
    "normalized": {
     "GTI": 67.5,
@@ -2065,16 +2067,16 @@
     "CPI": 51.3,
     "FSI": 56.9,
     "HCI": 48.4,
-    "EPI": 85.6
+    "EPI": 88.8
    },
    "contribution": {
     "GTI": 26.32,
-    "Crime": 10.32,
-    "GPI": 14.74,
+    "Crime": 10.31,
+    "GPI": 14.73,
     "CPI": 4.62,
-    "FSI": 3.41,
+    "FSI": 3.42,
     "HCI": 1.45,
-    "EPI": 2.57
+    "EPI": 2.66
    },
    "imputed": [],
    "us_advisory": 1,
@@ -2087,7 +2089,7 @@
   "TZA": {
    "name_ru": "Танзания",
    "name_en": "Tanzania",
-   "score": 62.2,
+   "score": 62.1,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -2099,7 +2101,7 @@
     "CPI": 40.0,
     "FSI": 75.7,
     "HCI": 43.6,
-    "EPI": 43.6
+    "EPI": 38.89
    },
    "normalized": {
     "GTI": 89.6,
@@ -2108,16 +2110,16 @@
     "CPI": 38.5,
     "FSI": 34.5,
     "HCI": 16.7,
-    "EPI": 38.1
+    "EPI": 33.5
    },
    "contribution": {
-    "GTI": 34.94,
-    "Crime": 8.08,
-    "GPI": 12.0,
+    "GTI": 34.96,
+    "Crime": 8.07,
+    "GPI": 11.99,
     "CPI": 3.46,
     "FSI": 2.07,
     "HCI": 0.5,
-    "EPI": 1.14
+    "EPI": 1.0
    },
    "imputed": [],
    "us_advisory": 3,
@@ -2133,7 +2135,7 @@
   "FRA": {
    "name_ru": "Франция",
    "name_en": "France",
-   "score": 60.4,
+   "score": 60.8,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -2145,7 +2147,7 @@
     "CPI": 66.0,
     "FSI": 28.3,
     "HCI": 76.9,
-    "EPI": 67.0
+    "EPI": 69.82
    },
    "normalized": {
     "GTI": 62.4,
@@ -2154,16 +2156,16 @@
     "CPI": 71.8,
     "FSI": 85.1,
     "HCI": 87.1,
-    "EPI": 85.0
+    "EPI": 96.6
    },
    "contribution": {
     "GTI": 24.34,
     "Crime": 7.38,
     "GPI": 11.96,
     "CPI": 6.46,
-    "FSI": 5.11,
+    "FSI": 5.1,
     "HCI": 2.61,
-    "EPI": 2.55
+    "EPI": 2.9
    },
    "imputed": [],
    "us_advisory": 2,
@@ -2176,7 +2178,7 @@
   "MEX": {
    "name_ru": "Мексика",
    "name_en": "Mexico",
-   "score": 59.6,
+   "score": 59.9,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -2188,7 +2190,7 @@
     "CPI": 27.0,
     "FSI": 69.0,
     "HCI": 72.3,
-    "EPI": 44.2
+    "EPI": 46.09
    },
    "normalized": {
     "GTI": 96.2,
@@ -2197,16 +2199,16 @@
     "CPI": 21.8,
     "FSI": 41.7,
     "HCI": 77.4,
-    "EPI": 39.3
+    "EPI": 48.2
    },
    "contribution": {
     "GTI": 37.52,
-    "Crime": 8.32,
+    "Crime": 8.31,
     "GPI": 5.8,
     "CPI": 1.96,
     "FSI": 2.5,
     "HCI": 2.32,
-    "EPI": 1.18
+    "EPI": 1.45
    },
    "imputed": [],
    "us_advisory": 2,
@@ -2219,7 +2221,7 @@
   "ZAF": {
    "name_ru": "ЮАР",
    "name_en": "South Africa",
-   "score": 59.2,
+   "score": 59.1,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -2231,7 +2233,7 @@
     "CPI": 41.0,
     "FSI": 69.6,
     "HCI": 63.9,
-    "EPI": 42.7
+    "EPI": 37.6
    },
    "normalized": {
     "GTI": 100.0,
@@ -2240,16 +2242,16 @@
     "CPI": 39.7,
     "FSI": 41.0,
     "HCI": 59.6,
-    "EPI": 36.3
+    "EPI": 30.9
    },
    "contribution": {
     "GTI": 39.0,
-    "Crime": 1.8,
+    "Crime": 1.79,
     "GPI": 9.52,
-    "CPI": 3.57,
+    "CPI": 3.58,
     "FSI": 2.46,
     "HCI": 1.79,
-    "EPI": 1.09
+    "EPI": 0.93
    },
    "imputed": [],
    "us_advisory": 2,
@@ -2262,7 +2264,7 @@
   "BRA": {
    "name_ru": "Бразилия",
    "name_en": "Brazil",
-   "score": 57.7,
+   "score": 57.5,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -2274,7 +2276,7 @@
     "CPI": 35.0,
     "FSI": 70.3,
     "HCI": 59.2,
-    "EPI": 53.0
+    "EPI": 48.27
    },
    "normalized": {
     "GTI": 89.4,
@@ -2283,16 +2285,16 @@
     "CPI": 32.1,
     "FSI": 40.3,
     "HCI": 49.7,
-    "EPI": 56.9
+    "EPI": 52.6
    },
    "contribution": {
     "GTI": 34.87,
-    "Crime": 5.06,
+    "Crime": 5.05,
     "GPI": 9.24,
-    "CPI": 2.89,
+    "CPI": 2.88,
     "FSI": 2.42,
     "HCI": 1.49,
-    "EPI": 1.71
+    "EPI": 1.58
    },
    "imputed": [],
    "us_advisory": 2,
@@ -2305,7 +2307,7 @@
   "PER": {
    "name_ru": "Перу",
    "name_en": "Peru",
-   "score": 54.8,
+   "score": 54.6,
    "level": 3,
    "level_name": "Умеренный риск",
    "color": "#ffc107",
@@ -2317,7 +2319,7 @@
     "CPI": 30.0,
     "FSI": 72.0,
     "HCI": 57.1,
-    "EPI": 46.5
+    "EPI": 41.01
    },
    "normalized": {
     "GTI": 81.7,
@@ -2326,16 +2328,16 @@
     "CPI": 25.6,
     "FSI": 38.5,
     "HCI": 45.2,
-    "EPI": 43.9
+    "EPI": 37.8
    },
    "contribution": {
-    "GTI": 31.86,
-    "Crime": 4.06,
+    "GTI": 31.85,
+    "Crime": 4.07,
     "GPI": 11.56,
-    "CPI": 2.3,
+    "CPI": 2.31,
     "FSI": 2.31,
     "HCI": 1.36,
-    "EPI": 1.32
+    "EPI": 1.13
    },
    "imputed": [],
    "us_advisory": 2,
@@ -2348,7 +2350,7 @@
   "EGY": {
    "name_ru": "Египет",
    "name_en": "Egypt",
-   "score": 50.2,
+   "score": 50.1,
    "level": 4,
    "level_name": "Высокий риск",
    "color": "#ff5722",
@@ -2360,7 +2362,7 @@
     "CPI": 30.0,
     "FSI": 82.8,
     "HCI": 47.9,
-    "EPI": 43.7
+    "EPI": 38.48
    },
    "normalized": {
     "GTI": 59.6,
@@ -2369,16 +2371,16 @@
     "CPI": 25.6,
     "FSI": 27.0,
     "HCI": 25.8,
-    "EPI": 38.3
+    "EPI": 32.7
    },
    "contribution": {
     "GTI": 23.24,
-    "Crime": 10.32,
+    "Crime": 10.31,
     "GPI": 10.84,
-    "CPI": 2.3,
+    "CPI": 2.31,
     "FSI": 1.62,
     "HCI": 0.77,
-    "EPI": 1.15
+    "EPI": 0.98
    },
    "imputed": [],
    "us_advisory": 2,
@@ -2391,7 +2393,7 @@
   "IDN": {
    "name_ru": "Индонезия",
    "name_en": "Indonesia",
-   "score": 49.4,
+   "score": 49.1,
    "level": 4,
    "level_name": "Высокий риск",
    "color": "#ff5722",
@@ -2403,7 +2405,7 @@
     "CPI": 34.0,
     "FSI": 63.7,
     "HCI": 61.8,
-    "EPI": 33.6
+    "EPI": 26.24
    },
    "normalized": {
     "GTI": 45.0,
@@ -2412,16 +2414,16 @@
     "CPI": 30.8,
     "FSI": 47.3,
     "HCI": 55.2,
-    "EPI": 18.0
+    "EPI": 7.7
    },
    "contribution": {
-    "GTI": 17.55,
-    "Crime": 10.26,
-    "GPI": 13.76,
+    "GTI": 17.56,
+    "Crime": 10.25,
+    "GPI": 13.75,
     "CPI": 2.77,
     "FSI": 2.84,
     "HCI": 1.66,
-    "EPI": 0.54
+    "EPI": 0.23
    },
    "imputed": [],
    "us_advisory": 2,
@@ -2434,7 +2436,7 @@
   "THA": {
    "name_ru": "Таиланд",
    "name_en": "Thailand",
-   "score": 49.3,
+   "score": 49.4,
    "level": 4,
    "level_name": "Высокий риск",
    "color": "#ff5722",
@@ -2446,7 +2448,7 @@
     "CPI": 33.0,
     "FSI": 66.2,
     "HCI": 77.6,
-    "EPI": 45.7
+    "EPI": 43.74
    },
    "normalized": {
     "GTI": 38.5,
@@ -2455,16 +2457,16 @@
     "CPI": 29.5,
     "FSI": 44.7,
     "HCI": 88.6,
-    "EPI": 42.3
+    "EPI": 43.4
    },
    "contribution": {
-    "GTI": 15.02,
+    "GTI": 15.01,
     "Crime": 13.18,
     "GPI": 11.9,
     "CPI": 2.65,
     "FSI": 2.68,
     "HCI": 2.66,
-    "EPI": 1.27
+    "EPI": 1.3
    },
    "imputed": [],
    "us_advisory": 1,
@@ -2489,7 +2491,7 @@
     "CPI": 31.0,
     "FSI": 84.0,
     "HCI": 71.3,
-    "EPI": 37.2
+    "EPI": 34.32
    },
    "normalized": {
     "GTI": 62.5,
@@ -2498,16 +2500,16 @@
     "CPI": 26.9,
     "FSI": 25.7,
     "HCI": 75.3,
-    "EPI": 25.3
+    "EPI": 24.2
    },
    "contribution": {
-    "GTI": 24.38,
+    "GTI": 24.39,
     "Crime": 11.66,
-    "GPI": 6.3,
+    "GPI": 6.29,
     "CPI": 2.42,
     "FSI": 1.54,
     "HCI": 2.26,
-    "EPI": 0.76
+    "EPI": 0.73
    },
    "imputed": [],
    "us_advisory": 2,
@@ -2520,7 +2522,7 @@
   "USA": {
    "name_ru": "США",
    "name_en": "United States",
-   "score": 49.1,
+   "score": 49.3,
    "level": 4,
    "level_name": "Высокий риск",
    "color": "#ff5722",
@@ -2532,7 +2534,7 @@
     "CPI": 64.0,
     "FSI": 44.5,
     "HCI": 66.9,
-    "EPI": 57.2
+    "EPI": 58.54
    },
    "normalized": {
     "GTI": 47.3,
@@ -2541,16 +2543,16 @@
     "CPI": 69.2,
     "FSI": 67.8,
     "HCI": 66.0,
-    "EPI": 65.3
+    "EPI": 73.6
    },
    "contribution": {
-    "GTI": 18.45,
+    "GTI": 18.44,
     "Crime": 9.36,
-    "GPI": 7.06,
+    "GPI": 7.05,
     "CPI": 6.23,
     "FSI": 4.07,
     "HCI": 1.98,
-    "EPI": 1.96
+    "EPI": 2.21
    },
    "imputed": [],
    "us_advisory": null,
@@ -2563,7 +2565,7 @@
   "VEN": {
    "name_ru": "Венесуэла",
    "name_en": "Venezuela",
-   "score": 47.6,
+   "score": 47.4,
    "level": 4,
    "level_name": "Высокий риск",
    "color": "#ff5722",
@@ -2575,7 +2577,7 @@
     "CPI": 10.0,
     "FSI": 89.0,
     "HCI": 39.4,
-    "EPI": 53.3
+    "EPI": 46.08
    },
    "normalized": {
     "GTI": 95.4,
@@ -2584,18 +2586,20 @@
     "CPI": 0.0,
     "FSI": 20.4,
     "HCI": 7.8,
-    "EPI": 57.5
+    "EPI": 48.2
    },
    "contribution": {
-    "GTI": 37.21,
+    "GTI": 37.2,
     "Crime": 0.0,
     "GPI": 7.26,
     "CPI": 0.0,
     "FSI": 1.22,
     "HCI": 0.23,
-    "EPI": 1.72
+    "EPI": 1.44
    },
-   "imputed": [],
+   "imputed": [
+    "EPI"
+   ],
    "us_advisory": 3,
    "ru_trips_2025": 7100,
    "description": "",
@@ -2606,7 +2610,7 @@
   "PHL": {
    "name_ru": "Филиппины",
    "name_en": "Philippines",
-   "score": 47.6,
+   "score": 47.5,
    "level": 4,
    "level_name": "Высокий риск",
    "color": "#ff5722",
@@ -2618,7 +2622,7 @@
     "CPI": 32.0,
     "FSI": 75.1,
     "HCI": 67.0,
-    "EPI": 32.1
+    "EPI": 27.87
    },
    "normalized": {
     "GTI": 45.0,
@@ -2627,16 +2631,16 @@
     "CPI": 28.2,
     "FSI": 35.2,
     "HCI": 66.2,
-    "EPI": 15.0
+    "EPI": 11.0
    },
    "contribution": {
-    "GTI": 17.55,
-    "Crime": 11.1,
+    "GTI": 17.53,
+    "Crime": 11.09,
     "GPI": 11.86,
     "CPI": 2.54,
     "FSI": 2.11,
     "HCI": 1.99,
-    "EPI": 0.45
+    "EPI": 0.33
    },
    "imputed": [],
    "us_advisory": 2,
@@ -2649,7 +2653,7 @@
   "UKR": {
    "name_ru": "Украина",
    "name_en": "Ukraine",
-   "score": 42.8,
+   "score": 42.7,
    "level": 5,
    "level_name": "Критическая опасность",
    "color": "#b71c1c",
@@ -2661,7 +2665,7 @@
     "CPI": 36.0,
     "FSI": 93.1,
     "HCI": 56.0,
-    "EPI": 54.6
+    "EPI": 51.12
    },
    "normalized": {
     "GTI": 65.9,
@@ -2670,16 +2674,16 @@
     "CPI": 33.3,
     "FSI": 16.0,
     "HCI": 42.9,
-    "EPI": 60.1
+    "EPI": 58.4
    },
    "contribution": {
-    "GTI": 25.7,
+    "GTI": 25.69,
     "Crime": 10.04,
     "GPI": 0.0,
     "CPI": 3.0,
     "FSI": 0.96,
     "HCI": 1.29,
-    "EPI": 1.8
+    "EPI": 1.75
    },
    "imputed": [],
    "us_advisory": 4,
@@ -2692,7 +2696,7 @@
   "KEN": {
    "name_ru": "Кения",
    "name_en": "Kenya",
-   "score": 37.5,
+   "score": 37.6,
    "level": 4,
    "level_name": "Высокий риск",
    "color": "#ff5722",
@@ -2704,7 +2708,7 @@
     "CPI": 30.0,
     "FSI": 86.5,
     "HCI": 62.2,
-    "EPI": 36.9
+    "EPI": 36.1
    },
    "normalized": {
     "GTI": 40.7,
@@ -2713,16 +2717,16 @@
     "CPI": 25.6,
     "FSI": 23.0,
     "HCI": 56.0,
-    "EPI": 24.6
+    "EPI": 27.8
    },
    "contribution": {
-    "GTI": 15.87,
+    "GTI": 15.86,
     "Crime": 7.56,
-    "GPI": 8.0,
-    "CPI": 2.3,
+    "GPI": 8.01,
+    "CPI": 2.31,
     "FSI": 1.38,
     "HCI": 1.68,
-    "EPI": 0.74
+    "EPI": 0.83
    },
    "imputed": [],
    "us_advisory": 2,
@@ -2735,7 +2739,7 @@
   "ISR": {
    "name_ru": "Израиль",
    "name_en": "Israel",
-   "score": 36.8,
+   "score": 37.1,
    "level": 5,
    "level_name": "Критическая опасность",
    "color": "#b71c1c",
@@ -2747,7 +2751,7 @@
     "CPI": 62.0,
     "FSI": 51.5,
     "HCI": 73.5,
-    "EPI": 48.0
+    "EPI": 51.69
    },
    "normalized": {
     "GTI": 20.8,
@@ -2756,16 +2760,16 @@
     "CPI": 66.7,
     "FSI": 60.3,
     "HCI": 79.9,
-    "EPI": 46.9
+    "EPI": 59.6
    },
    "contribution": {
     "GTI": 8.11,
     "Crime": 14.56,
-    "GPI": 0.66,
+    "GPI": 0.65,
     "CPI": 6.0,
     "FSI": 3.62,
     "HCI": 2.4,
-    "EPI": 1.41
+    "EPI": 1.79
    },
    "imputed": [],
    "us_advisory": 3,
@@ -2778,7 +2782,7 @@
   "IND": {
    "name_ru": "Индия",
    "name_en": "India",
-   "score": 36.7,
+   "score": 36.6,
    "level": 4,
    "level_name": "Высокий риск",
    "color": "#ff5722",
@@ -2790,7 +2794,7 @@
     "CPI": 39.0,
     "FSI": 72.3,
     "HCI": 65.6,
-    "EPI": 27.6
+    "EPI": 22.46
    },
    "normalized": {
     "GTI": 25.0,
@@ -2799,16 +2803,16 @@
     "CPI": 37.2,
     "FSI": 38.2,
     "HCI": 63.2,
-    "EPI": 6.0
+    "EPI": 0.0
    },
    "contribution": {
-    "GTI": 9.75,
-    "Crime": 10.86,
+    "GTI": 9.76,
+    "Crime": 10.85,
     "GPI": 8.42,
     "CPI": 3.35,
     "FSI": 2.29,
     "HCI": 1.9,
-    "EPI": 0.18
+    "EPI": 0.0
    },
    "imputed": [],
    "us_advisory": 2,
@@ -2821,7 +2825,7 @@
   "IRQ": {
    "name_ru": "Ирак",
    "name_en": "Iraq",
-   "score": 34.8,
+   "score": 34.7,
    "level": 4,
    "level_name": "Высокий риск",
    "color": "#ff5722",
@@ -2833,7 +2837,7 @@
     "CPI": 28.0,
     "FSI": 88.6,
     "HCI": 47.2,
-    "EPI": 30.3
+    "EPI": 26.55
    },
    "normalized": {
     "GTI": 32.1,
@@ -2842,16 +2846,16 @@
     "CPI": 23.1,
     "FSI": 20.8,
     "HCI": 24.3,
-    "EPI": 11.4
+    "EPI": 8.3
    },
    "contribution": {
     "GTI": 12.52,
     "Crime": 12.26,
-    "GPI": 5.68,
+    "GPI": 5.67,
     "CPI": 2.08,
     "FSI": 1.25,
     "HCI": 0.73,
-    "EPI": 0.34
+    "EPI": 0.25
    },
    "imputed": [],
    "us_advisory": 4,
@@ -2876,7 +2880,7 @@
     "CPI": 23.0,
     "FSI": 82.9,
     "HCI": 52.8,
-    "EPI": 41.8
+    "EPI": 38.42
    },
    "normalized": {
     "GTI": 36.1,
@@ -2885,16 +2889,16 @@
     "CPI": 16.7,
     "FSI": 26.9,
     "HCI": 36.2,
-    "EPI": 34.5
+    "EPI": 32.5
    },
    "contribution": {
-    "GTI": 14.08,
-    "Crime": 8.9,
+    "GTI": 14.09,
+    "Crime": 8.91,
     "GPI": 4.62,
     "CPI": 1.5,
     "FSI": 1.61,
-    "HCI": 1.09,
-    "EPI": 1.03
+    "HCI": 1.08,
+    "EPI": 0.98
    },
    "imputed": [],
    "us_advisory": 4,
@@ -2907,7 +2911,7 @@
   "COL": {
    "name_ru": "Колумбия",
    "name_en": "Colombia",
-   "score": 26.1,
+   "score": 26.2,
    "level": 5,
    "level_name": "Критическая опасность",
    "color": "#b71c1c",
@@ -2919,7 +2923,7 @@
     "CPI": 37.0,
     "FSI": 75.6,
     "HCI": 68.9,
-    "EPI": 49.7
+    "EPI": 48.83
    },
    "normalized": {
     "GTI": 17.0,
@@ -2928,16 +2932,16 @@
     "CPI": 34.6,
     "FSI": 34.6,
     "HCI": 70.2,
-    "EPI": 50.3
+    "EPI": 53.8
    },
    "contribution": {
     "GTI": 6.63,
     "Crime": 5.74,
     "GPI": 4.88,
-    "CPI": 3.11,
+    "CPI": 3.12,
     "FSI": 2.08,
     "HCI": 2.11,
-    "EPI": 1.51
+    "EPI": 1.61
    },
    "imputed": [],
    "us_advisory": 3,
@@ -2950,7 +2954,7 @@
   "MMR": {
    "name_ru": "Мьянма",
    "name_en": "Myanmar",
-   "score": 24.4,
+   "score": 24.6,
    "level": 5,
    "level_name": "Критическая опасность",
    "color": "#b71c1c",
@@ -2962,7 +2966,7 @@
     "CPI": 16.0,
     "FSI": 100.0,
     "HCI": 48.4,
-    "EPI": 27.1
+    "EPI": 28.87
    },
    "normalized": {
     "GTI": 27.2,
@@ -2971,16 +2975,16 @@
     "CPI": 7.7,
     "FSI": 8.6,
     "HCI": 26.8,
-    "EPI": 5.0
+    "EPI": 13.1
    },
    "contribution": {
-    "GTI": 10.61,
-    "Crime": 8.66,
-    "GPI": 2.96,
+    "GTI": 10.59,
+    "Crime": 8.67,
+    "GPI": 2.97,
     "CPI": 0.69,
     "FSI": 0.52,
-    "HCI": 0.8,
-    "EPI": 0.15
+    "HCI": 0.81,
+    "EPI": 0.39
    },
    "imputed": [],
    "us_advisory": 4,
@@ -2996,7 +3000,7 @@
   "PAK": {
    "name_ru": "Пакистан",
    "name_en": "Pakistan",
-   "score": 19.0,
+   "score": 19.4,
    "level": 5,
    "level_name": "Критическая опасность",
    "color": "#b71c1c",
@@ -3008,7 +3012,7 @@
     "CPI": 28.0,
     "FSI": 91.7,
     "HCI": 59.4,
-    "EPI": 25.5
+    "EPI": 29.03
    },
    "normalized": {
     "GTI": 0.0,
@@ -3017,16 +3021,16 @@
     "CPI": 23.1,
     "FSI": 17.5,
     "HCI": 50.1,
-    "EPI": 1.8
+    "EPI": 13.4
    },
    "contribution": {
     "GTI": 0.0,
-    "Crime": 11.44,
+    "Crime": 11.45,
     "GPI": 2.88,
     "CPI": 2.08,
     "FSI": 1.05,
     "HCI": 1.5,
-    "EPI": 0.05
+    "EPI": 0.4
    },
    "imputed": [],
    "us_advisory": 3,
@@ -3039,7 +3043,7 @@
   "NGA": {
    "name_ru": "Нигерия",
    "name_en": "Nigeria",
-   "score": 16.5,
+   "score": 16.4,
    "level": 5,
    "level_name": "Критическая опасность",
    "color": "#b71c1c",
@@ -3051,7 +3055,7 @@
     "CPI": 26.0,
     "FSI": 96.6,
     "HCI": 48.0,
-    "EPI": 37.9
+    "EPI": 32.85
    },
    "normalized": {
     "GTI": 9.1,
@@ -3060,16 +3064,16 @@
     "CPI": 20.5,
     "FSI": 12.3,
     "HCI": 26.0,
-    "EPI": 26.7
+    "EPI": 21.2
    },
    "contribution": {
-    "GTI": 3.55,
+    "GTI": 3.56,
     "Crime": 4.16,
     "GPI": 4.66,
-    "CPI": 1.84,
+    "CPI": 1.85,
     "FSI": 0.74,
     "HCI": 0.78,
-    "EPI": 0.8
+    "EPI": 0.64
    },
    "imputed": [],
    "us_advisory": 3,
@@ -3082,7 +3086,7 @@
   "AFG": {
    "name_ru": "Афганистан",
    "name_en": "Afghanistan",
-   "score": 14.3,
+   "score": 14.5,
    "level": 5,
    "level_name": "Критическая опасность",
    "color": "#b71c1c",
@@ -3094,7 +3098,7 @@
     "CPI": 16.0,
     "FSI": 103.9,
     "HCI": 62.5,
-    "EPI": 31.0
+    "EPI": 33.14
    },
    "normalized": {
     "GTI": 22.1,
@@ -3103,16 +3107,16 @@
     "CPI": 7.7,
     "FSI": 4.5,
     "HCI": 56.7,
-    "EPI": 12.8
+    "EPI": 21.8
    },
    "contribution": {
     "GTI": 8.62,
-    "Crime": 1.74,
-    "GPI": 0.84,
+    "Crime": 1.73,
+    "GPI": 0.85,
     "CPI": 0.69,
     "FSI": 0.27,
     "HCI": 1.7,
-    "EPI": 0.38
+    "EPI": 0.65
    },
    "imputed": [
     "HCI"
@@ -3127,7 +3131,7 @@
   "SYR": {
    "name_ru": "Сирия",
    "name_en": "Syria",
-   "score": 11.5,
+   "score": 11.4,
    "level": 5,
    "level_name": "Критическая опасность",
    "color": "#b71c1c",
@@ -3139,7 +3143,7 @@
     "CPI": 15.0,
     "FSI": 108.1,
     "HCI": 35.7,
-    "EPI": 45.3
+    "EPI": 41.91
    },
    "normalized": {
     "GTI": 12.0,
@@ -3148,16 +3152,16 @@
     "CPI": 6.4,
     "FSI": 0.0,
     "HCI": 0.0,
-    "EPI": 41.5
+    "EPI": 39.7
    },
    "contribution": {
     "GTI": 4.68,
-    "Crime": 3.7,
-    "GPI": 1.28,
+    "Crime": 3.71,
+    "GPI": 1.27,
     "CPI": 0.58,
     "FSI": 0.0,
     "HCI": 0.0,
-    "EPI": 1.24
+    "EPI": 1.19
    },
    "imputed": [
     "EPI"

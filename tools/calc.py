@@ -182,7 +182,7 @@ ARCHIVE = {'GTI': 'https://web.archive.org/web/20260909213410/https://www.vision
            'CPI': 'https://web.archive.org/web/20260906222935/https://www.transparency.org/en/cpi/2025',
            'FSI': 'https://web.archive.org/web/20260811023650/https://fragilestatesindex.org/global-data/',
            'HCI': 'https://web.archive.org/web/20260810222903/https://www.numbeo.com/health-care/rankings_by_country.jsp',
-           'EPI': 'https://web.archive.org/web/20260820140053/https://epi.yale.edu/measure/2024/epi',
+           'EPI': 'https://web.archive.org/web/20260907103554/https://epi.yale.edu/2026-methodology (страница методики редакции 2026; значения по странам в архиве есть со страниц стран от 07-08.10.2026, например https://web.archive.org/web/20261008023807/https://epi.yale.edu/2026/results/country/AFG)',
            'us_advisory': 'нет: с 15.07.2026 travel.state.gov отвечает архиву ошибкой 403, а на страницах стран уровень подгружается скриптом; уровни сверены по API https://cadataapi.state.gov/api/TravelAdvisories',
            'ru_trips_2025': ''}
 
@@ -198,8 +198,8 @@ SOURCES = [
     ['FSI', 'Fragile States Index 2024', 'Fund for Peace', 'https://fragilestatesindex.org', '11.09.2026'],
     ['HCI', 'Numbeo Health Care Index by Country 2026 Mid-Year (Куба, Киргизия, Мьянма, Танзания - со страниц стран, в рейтинг не вошли)', 'Numbeo',
      'https://www.numbeo.com/health-care/rankings_by_country.jsp', '11.09.2026'],
-    ['EPI', 'Environmental Performance Index 2024', 'Yale Center for Environmental Law and Policy',
-     'https://epi.yale.edu', '11.09.2026'],
+    ['EPI', 'Environmental Performance Index 2026 (Сирия, Куба, Венесуэла не охвачены - восстановлены медианой по региону)', 'Yale Center for Environmental Law and Policy',
+     'https://epi.yale.edu/2026/results/indicator/EPI', '05.11.2026'],
     ['us_advisory', 'Travel Advisories: уровни по состоянию на 11.09.2026 (даты предупреждений - data/us_advisories.csv)',
      'U.S. Department of State', 'https://travel.state.gov', '05.11.2026'],
     ['ru_trips_2025', 'Выездной туризм граждан РФ за 2025 г. (данные Погранслужбы ФСБ России)',
